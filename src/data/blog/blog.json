@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "title": "La mejor guía para un acompañamiento respetuoso",
+        "link": "/journal-single-post",
+        "imgLink": "assets/img/servicio1.png",
+        "imgAlt": "La mejor guía para un acompañamiento respetuoso",
+        "categoryTitle": "Acompañamiento perinatal",
+        "categoryLink": "/journal"
+    },
+    {
+        "id": "2",
+        "title": "Cuéntame en qué puedo ayudarte",
+        "link": "/journal-single-post",
+        "imgLink": "assets/img/servicio2.png",
+        "imgAlt": "Cuéntame en qué puedo ayudarte",
+        "categoryTitle": "Terapia",
+        "categoryLink": "/journal"
+    }
+]
