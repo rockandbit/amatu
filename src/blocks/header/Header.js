@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../../blocks/logo/Logo';
 // import SearchModal from '../../components/modal/SearchModal';
 import MenuModal from '../../components/modal/MenuModal';
-import LogoAmatu from '../../assets/img/logo/amatu.png'
+import LogoAmatu from '../../assets/img/logo/amatu-logo.png'
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,12 +16,12 @@ const Header = () => {
                     <Logo image={ LogoAmatu } />
                 </div>
             <div className="search-toggle align-self-center">
-                    <span><FontAwesomeIcon icon={faPhone} size="sm" className='mr-1'/>+34 608 48 58 81 / <FontAwesomeIcon icon={faEnvelope} size="sm" className='mr-1' />elis.mvl@gmail.com</span>
+                    <span><FontAwesomeIcon icon={faPhone} size="sm" className='mr-1'/>+34 608 48 58 81 / <FontAwesomeIcon icon={faEnvelope} size="sm" className='mr-1' />psicologia.amatu@gmail.com</span>
                     </div>
 
                 {/* <SearchModal /> */}
 
-                <MenuModal />
+                {/* <MenuModal /> */}
             </div>
         </header>
     );

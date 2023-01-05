@@ -1,14 +1,12 @@
 import React, { Fragment } from 'react';
 import MetaTags from 'react-meta-tags';
 
-// import Loading from '../blocks/loading/Loading';
 import Header from '../blocks/header/Header';
 import Footer from '../blocks/footer/Footer';
 
 import PageTitleHome from '../blocks/page-title/PageTitleHome';
-// import Works from '../blocks/works/Works';
-import Journal from '../blocks/blog/Blog';
 import Contacts from '../blocks/contacts/Contacts';
+import Services from '../blocks/services/Services';
 
 const Home = () => {
     document.body.classList.add( 'home' );
@@ -38,9 +36,7 @@ const Home = () => {
             <main id="main" className="site-main">
                 <PageTitleHome />
                 
-                <Journal />
-
-                {/* <Works /> */}
+                <Services />
 
                 <Contacts />
 

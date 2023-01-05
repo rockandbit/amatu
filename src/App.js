@@ -10,6 +10,9 @@ import Works from './pages/Works';
 import WorksInside from './pages/WorksInside';
 import page404 from './pages/404';
 import UserInterface from './pages/UserInterface';
+import Perinatal from './pages/Perinatal';
+import Crianza from './pages/Crianza';
+import Ansiedad from './pages/Ansiedad';
 
 function App() {
     return (
@@ -22,25 +25,20 @@ function App() {
                 />
                 <Route
                     exact
-                    path={ `${ process.env.PUBLIC_URL + "/about" }` }
-                    component={ About }
+                    path={ `${ process.env.PUBLIC_URL + "/perinatal" }` }
+                    component={ Perinatal }
                 />
                 <Route
                     exact
-                    path={ `${ process.env.PUBLIC_URL + "/about" }` }
-                    component={ About }
+                    path={ `${ process.env.PUBLIC_URL + "/crianza" }` }
+                    component={ Crianza }
                 />
                 <Route
                     exact
-                    path={ `${ process.env.PUBLIC_URL + "/contacts" }` }
-                    component={ Contacts }
+                    path={ `${ process.env.PUBLIC_URL + "/ansiedad" }` }
+                    component={ Ansiedad }
                 />
-                <Route
-                    exact
-                    path={ `${ process.env.PUBLIC_URL + "/journal" }` }
-                    component={ Journal }
-                />
-                <Route
+                {/* <Route
                     exact
                     path={ `${ process.env.PUBLIC_URL + "/journal-single-post" }` }
                     component={ JournalSinglePost }
@@ -64,7 +62,7 @@ function App() {
                     exact
                     path={ `${ process.env.PUBLIC_URL + "/works-inside" }` }
                     component={ WorksInside }
-                />
+                /> */}
                 <Route exact component={ page404 }/>
             </Switch>
         </Router>

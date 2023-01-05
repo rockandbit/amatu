@@ -1,10 +1,10 @@
 import React from 'react';
-import dataBlogCard from '../../data/blog/blog';
+import dataServicesCard from '../../data/services/services';
 import servicio from '../../assets/img/servicio1.png'
 
-const Blog = () => {
+const Services = () => {
     return (
-        <section id="blog" className="block spacer p-top-xl">
+        <section id="services" className="block spacer p-top-xl">
             <div className="wrapper">
                 <h3 className="text-right">
                     <a title="Blogging" className="transform-scale-h" href={ process.env.PUBLIC_URL + "/journal" }>
@@ -13,12 +13,12 @@ const Blog = () => {
                 </h3>
             </div>
 
-            <div className="bg-gray-light ptb-blog">
+            <div className="bg-gray-light ptb-services">
                 <div className="wrapper">
                     <div className="row gutter-width-lg">
-                        { dataBlogCard && dataBlogCard.map( ( item, key ) => {
+                        { dataServicesCard && dataServicesCard.map( ( item, key ) => {
                             return (
-                                <div key={ key } className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <div key={ key } className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                                     <div className="card card-post">
                                         <div className="card-top position-relative">
                                             <a title={ item.title } href={ process.env.PUBLIC_URL + item.link }>
@@ -50,4 +50,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default Services;

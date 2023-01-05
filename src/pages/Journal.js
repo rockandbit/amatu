@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import MetaTags from 'react-meta-tags';
 
-import Loading from '../blocks/loading/Loading';
+// import Loading from '../blocks/loading/Loading';
 import Header from '../blocks/header/Header';
 import Footer from '../blocks/footer/Footer';
 
@@ -10,7 +10,7 @@ import JournalItemsData from '../data/journal/journalItems';
 import Widget from '../blocks/widget/Widget';
 import LoadMoreButton from '../components/loadmore/LoadMore';
 
-const Journal = () => {
+const Perinatal = () => {
     document.body.classList.add( 'blog' );
     document.body.classList.add( 'bg-fixed' );
     document.body.classList.add( 'bg-line' );
@@ -19,7 +19,7 @@ const Journal = () => {
         <Fragment>
             <MetaTags>
                 <meta charSet="UTF-8" />
-                <title>Journal | Oxer - Minimal Portfolio React Template</title>
+                <title>Acompañamiento Perinatal</title>
 
                 <meta httpEquiv="x-ua-compatible" content="ie=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +31,7 @@ const Journal = () => {
                 <meta name="format-detection" content="telephone=no" />
             </MetaTags>
 
-            <Loading />
+            {/* <Loading /> */}
 
             <Header />
 
@@ -90,4 +90,4 @@ const Journal = () => {
     );
 };
 
-export default Journal;
+export default Perinatal;

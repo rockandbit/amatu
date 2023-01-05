@@ -14,8 +14,10 @@ const PageTitleHome = () => {
                             <div className="title-clone">Amatu</div>
                         </div>
 
-                        <div className="spacer p-top-lg">
-                            <p className="p-large w-75">Me llamo Elisa Valenzuela Mendoza. Soy psicóloga, especializada en <b>acompañamiento perinatal</b>. Echa un vistazo y conóceme más :)</p>
+                        <div className="spacer p-top-lg d-flex">
+                            <p className="p-large w-75 text-justify">
+                            Soy Elisa Valenzuela Mendoza, <b>acompaño procesos de vida</b>. <b>Psicoterapeuta</b> por vocación y por herencia. Formada en terapias humanistas desde hace más de 20 años, graduada en <b>psicología</b> y especializada en <b>salud mental perinatal</b>.
+                            </p>
                         </div>
                     </div>
 
