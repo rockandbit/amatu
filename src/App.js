@@ -1,18 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
-import Contacts from './pages/Contacts';
-import Journal from './pages/Journal';
-import JournalSinglePost from './pages/JournalSinglePost';
-import SearchResults from './pages/SearchResults';
-import Works from './pages/Works';
-import WorksInside from './pages/WorksInside';
 import page404 from './pages/404';
-import UserInterface from './pages/UserInterface';
 import Perinatal from './pages/Perinatal';
 import Crianza from './pages/Crianza';
-import Ansiedad from './pages/Ansiedad';
+import Bienestar from './pages/Bienestar';
 
 function App() {
     return (
@@ -35,8 +27,8 @@ function App() {
                 />
                 <Route
                     exact
-                    path={ `${ process.env.PUBLIC_URL + "/ansiedad" }` }
-                    component={ Ansiedad }
+                    path={ `${ process.env.PUBLIC_URL + "/bienestar" }` }
+                    component={ Bienestar }
                 />
                 {/* <Route
                     exact

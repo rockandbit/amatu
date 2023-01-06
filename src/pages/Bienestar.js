@@ -4,7 +4,6 @@ import MetaTags from 'react-meta-tags';
 import Header from '../blocks/header/Header';
 import Footer from '../blocks/footer/Footer';
 
-import PageTitleJournalSingle from '../blocks/page-title/PageTitleJournalSingle';
 import JournalDescription from '../blocks/journal/JournalDescription';
 import JournalMeta from '../blocks/journal/JournalMeta';
 import JournalDate from '../blocks/journal/JournalDate';
@@ -12,7 +11,7 @@ import JournalComments from '../blocks/journal/JournalComments';
 import JournalTags from '../blocks/journal/JournalTags';
 import Widget from '../blocks/widget/Widget';
 
-const Ansiedad = () => {
+const Bienestar = () => {
     document.body.classList.add( 'single-post' );
     document.body.classList.add( 'bg-fixed' );
     document.body.classList.add( 'bg-line' );
@@ -21,7 +20,7 @@ const Ansiedad = () => {
         <Fragment>
             <MetaTags>
                 <meta charSet="UTF-8" />
-                <title>Ansiedad - Tristeza | Amatu</title>
+                <title>Bienestar emocional | Amatu</title>
 
                 <meta httpEquiv="x-ua-compatible" content="ie=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +38,7 @@ const Ansiedad = () => {
         <section id="page-title">
             <div className="wrapper">
                 <div className="title position-relative">
-                    <h2 className="small">Ansiedad - Tristeza<span className="dot">.</span></h2>
+                    <h2 className="small">Bienestar emocional<span className="dot">.</span></h2>
                     <h3>"Incluso en los mares más oscuros <span className="line">existen</span> los colores más bellos"</h3>
                     <p className='subtitle'>Elisa Valenzuela Mendoza</p>
                 </div>
@@ -84,4 +83,4 @@ const Ansiedad = () => {
     );
 };
 
-export default Ansiedad;
+export default Bienestar;

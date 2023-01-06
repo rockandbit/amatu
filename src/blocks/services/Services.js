@@ -18,7 +18,7 @@ const Services = () => {
                     <div className="row gutter-width-lg">
                         { dataServicesCard && dataServicesCard.map( ( item, key ) => {
                             return (
-                                <div key={ key } className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                                <div key={ key } className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                     <div className="card card-post">
                                         <div className="card-top position-relative">
                                             <a title={ item.title } href={ process.env.PUBLIC_URL + item.link }>
