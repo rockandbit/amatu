@@ -5,8 +5,10 @@ import Header from '../blocks/header/Header';
 import Footer from '../blocks/footer/Footer';
 
 import PageTitleHome from '../blocks/page-title/PageTitleHome';
-import Contacts from '../blocks/contacts/Contacts';
+// import Contacts from '../blocks/contacts/Contacts';
 import Services from '../blocks/services/Services';
+import ContactForm from '../components/form/ContactForm';
+import mapsImage from '../assets/img/maps.png';
 
 const Home = () => {
     document.body.classList.add( 'home' );
@@ -35,11 +37,18 @@ const Home = () => {
 
             <main id="main" className="site-main">
                 <PageTitleHome />
-                
                 <Services />
-
-                <Contacts />
-
+                <div className="wrapper row">
+                    <div className='col-md-6'>
+                        <h3>Cuéntame <span className="line">tu caso</span></h3>
+                            <ContactForm />
+                        </div>
+                        <div className='col-md-6'>
+                            <h3><span className="line">Ubicación</span></h3>
+                            <img src={mapsImage} alt="Psicología Amatu ubicación"/>
+                        </div>
+                    </div>
+                {/* <Contacts /> */}
             </main>
 
             <Footer />

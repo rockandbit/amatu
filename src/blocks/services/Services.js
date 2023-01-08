@@ -8,7 +8,7 @@ const Services = () => {
             <div className="wrapper">
                 <h3 className="text-right">
                     <a title="Blogging" className="transform-scale-h" href={ process.env.PUBLIC_URL + "/journal" }>
-                        <span className="line">Mis servicios</span>
+                        Mis <span className="line">servicios</span>
                     </a>
                 </h3>
             </div>

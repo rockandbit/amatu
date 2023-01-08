@@ -5,6 +5,7 @@ import page404 from './pages/404';
 import Perinatal from './pages/Perinatal';
 import Crianza from './pages/Crianza';
 import Bienestar from './pages/Bienestar';
+import Contacts from './pages/Contacts';
 
 function App() {
     return (
@@ -29,6 +30,11 @@ function App() {
                     exact
                     path={ `${ process.env.PUBLIC_URL + "/bienestar" }` }
                     component={ Bienestar }
+                />
+                <Route
+                    exact
+                    path={ `${ process.env.PUBLIC_URL + "/contacts" }` }
+                    component={ Contacts }
                 />
                 {/* <Route
                     exact
