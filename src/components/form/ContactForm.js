@@ -103,6 +103,8 @@ class ContactForm extends Component {
 
     render() {
         return (
+            <>
+            <h3>Cuéntame <span className="line">tu caso</span></h3>
             <form onSubmit={ this.submitForm } className="wpcf7-form">
                 <p className="input-group gutter-width-30">
                     <span className="gutter-width">
@@ -143,6 +145,7 @@ class ContactForm extends Component {
                     <input name="submit" type="submit" className="btn btn-dark border-0 transform-scale-h" defaultValue="Send" />
                 </p>
             </form>
+            </>
         );
     }
 }
