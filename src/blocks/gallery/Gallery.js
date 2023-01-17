@@ -78,7 +78,7 @@ class Gallery extends Component {
                     key={key}
                     title={item.title}
                     className={"gallery-item active " + item.category}
-                    href={process.env.PUBLIC_URL + item.link}
+                    href={`#${item.anchor}`}
                   >
                     <div className="img object-fit">
                       <div className="object-fit-cover">
@@ -89,11 +89,10 @@ class Gallery extends Component {
                     <div className="gallery-hover">
                       <div className="gallery-hover-wrapper">
                         <h3 className="mb-3">{item.title}</h3>
-                        <p className="text-white p-large">{item.description}</p>
 
                         <a
                           className="btn btn-link border-0 transform-scale-h p-0"
-                          href={item.href}
+                          href={`#${item.anchor}`}
                         >
                           {item.button}
                           <i className="icon-c icon-arrow-right" />

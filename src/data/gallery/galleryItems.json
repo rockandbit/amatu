@@ -6,7 +6,7 @@
     "category": "gallery-item-visible product",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "#no-maternidad",
+    "anchor": "no-maternidad",
     "button": "Saber más"
   },
   {
@@ -16,8 +16,8 @@
     "category": "gallery-item-visible product",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "maternidad",
+    "button": "Saber más"
   },
   {
     "id": "3",
@@ -26,8 +26,8 @@
     "category": "gallery-item-visible product",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "violencia-obstetrica",
+    "button": "Saber más"
   },
   {
     "id": "4",
@@ -36,8 +36,8 @@
     "category": "gallery-item-visible culture",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "lactancia",
+    "button": "Saber más"
   },
   {
     "id": "5",
@@ -46,8 +46,8 @@
     "category": "culture",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "duelo-perinatal",
+    "button": "Saber más"
   },
   {
     "id": "6",
@@ -56,8 +56,8 @@
     "category": "product",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "interrupcion-voluntaria",
+    "button": "Saber más"
   },
   {
     "id": "7",
@@ -66,8 +66,8 @@
     "category": "culture personal",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "la-pareja",
+    "button": "Saber más"
   },
   {
     "id": "8",
@@ -76,8 +76,8 @@
     "category": "culture personal",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "la-familia",
+    "button": "Saber más"
   },
   {
     "id": "9",
@@ -86,7 +86,7 @@
     "category": "culture personal",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
-    "href": "no-maternidad",
-    "button": "Look inside"
+    "anchor": "crianza",
+    "button": "Saber más"
   }
 ]

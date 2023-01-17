@@ -7,6 +7,8 @@ import Footer from "../blocks/footer/Footer";
 
 import PageTitleWorks from "../blocks/page-title/PageTitleWorks";
 import Gallery from "../blocks/gallery/Gallery";
+import PageTitlePerinatal from "../blocks/page-title/PageTitlePerinatal";
+import GalleryTexts from "../blocks/gallery/GalleryTexts";
 
 const Perinatal = () => {
   document.body.classList.add("archive");
@@ -34,19 +36,19 @@ const Perinatal = () => {
       <Header />
 
       <main id="main" className="site-main">
-        <PageTitleWorks />
+        <PageTitlePerinatal />
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
             <Gallery paddingBottomClass=" pb-0" />
-            <div id="no-maternidad" className="block spacer p-top-xl">
+            <GalleryTexts />
+            {/* <div id="no-maternidad" className="block spacer p-top-xl">
               <div className="row gutter-width-lg with-pb-lg">
-                <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div className="card border-0">
                     <div className="card-body p-0">
                       <h4>La no maternidad</h4>
-
-                      <p>
+                      <p className="p-large">
                         No todas las mujeres hemos nacido para ser madres, a
                         veces toca decidirlo a contracorriente y otras la vida
                         decide por ti. Te acompaño en este camino de
@@ -58,6 +60,25 @@ const Perinatal = () => {
                 </div>
               </div>
             </div>
+            <div id="maternidad" className="block spacer p-top-xl">
+              <div className="row gutter-width-lg with-pb-lg">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div className="card border-0">
+                    <div className="card-body p-0">
+                      <h4>La maternidad</h4>
+                      <p className="p-large">
+                        Es un cambio que atraviesa todos los ejes de la vida y
+                        ésta sociedad cada día más desconectada y acelerada no
+                        lo pone fácil. Si eres de las que desea sentirse
+                        acompañada y transitar los cambios desde una mirada
+                        consciente, estoy para ti desde la búsqueda del embarazo
+                        hasta la crianza.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> */}
           </div>
         </section>
       </main>
