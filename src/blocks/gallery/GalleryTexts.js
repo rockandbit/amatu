@@ -1,27 +1,15 @@
 import React, { Component } from "react";
-import Isotope from "isotope-layout";
-import ImagesLoaded from "imagesloaded";
 import PropTypes from "prop-types";
-import GalleryMenuData from "../../data/gallery/galleryMenu";
-import GalleryItemsData from "../../data/gallery/galleryItems";
+import parse from "html-react-parser";
 
 class GalleryTexts extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.onFilterChange = this.onFilterChange.bind(this);
-
-  //   this.state = {
-  //     selected: 0,
-  //     list: GalleryMenuData,
-  //   };
-  // }
-
   render() {
+    const { data } = this.props;
     return (
       <div className="block spacer p-top-xl">
         <div className="row gutter-width-lg with-pb-lg">
-          {GalleryItemsData &&
-            GalleryItemsData.map((item, key) => {
+          {data &&
+            data.map((item, key) => {
               return (
                 <div
                   id={item.anchor}
@@ -30,7 +18,7 @@ class GalleryTexts extends Component {
                   <div className="card border-0">
                     <div className="card-body p-0">
                       <h4>{item.title}</h4>
-                      <p className="p-large">{item.description}</p>
+                      <p className="p-large">{parse(item.description)}</p>
                     </div>
                   </div>
                 </div>

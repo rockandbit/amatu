@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Isotope from "isotope-layout";
 import ImagesLoaded from "imagesloaded";
 import PropTypes from "prop-types";
-import GalleryMenuData from "../../data/gallery/galleryMenu";
-import GalleryItemsData from "../../data/gallery/galleryItems";
+import GalleryTexts from "./GalleryTexts";
 
 class Gallery extends Component {
   constructor(props) {
@@ -12,7 +11,6 @@ class Gallery extends Component {
 
     this.state = {
       selected: 0,
-      list: GalleryMenuData,
     };
   }
 
@@ -65,61 +63,50 @@ class Gallery extends Component {
   }
 
   render() {
-    const listCount = this.state.list.length - 1;
-
+    const data = this.props.data;
     return (
-      <div className="gallery">
-        <div className={"gallery-item-wrapper" + this.props.paddingBottomClass}>
-          <div className="gallery-items" ref={(c) => (this.grid = c)}>
-            {GalleryItemsData &&
-              GalleryItemsData.map((item, key) => {
-                return (
-                  <a
-                    key={key}
-                    title={item.title}
-                    className={"gallery-item active " + item.category}
-                    href={`#${item.anchor}`}
-                  >
-                    <div className="img object-fit">
-                      <div className="object-fit-cover">
-                        <img src={item.imgLink} alt={item.title} />
+      <>
+        <div className="gallery">
+          <div
+            className={"gallery-item-wrapper" + this.props.paddingBottomClass}
+          >
+            <div className="gallery-items" ref={(c) => (this.grid = c)}>
+              {data &&
+                data.map((item, key) => {
+                  return (
+                    <a
+                      key={key}
+                      title={item.title}
+                      className={"gallery-item active " + item.category}
+                      href={`#${item.anchor}`}
+                    >
+                      <div className="img object-fit">
+                        <div className="object-fit-cover">
+                          <img src={item.imgLink} alt={item.title} />
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="gallery-hover">
-                      <div className="gallery-hover-wrapper">
-                        <h3 className="mb-3">{item.title}</h3>
+                      <div className="gallery-hover">
+                        <div className="gallery-hover-wrapper">
+                          <h3 className="mb-3">{item.title}</h3>
 
-                        <a
-                          className="btn btn-link border-0 transform-scale-h p-0"
-                          href={`#${item.anchor}`}
-                        >
-                          {item.button}
-                          <i className="icon-c icon-arrow-right" />
-                        </a>
+                          <a
+                            className="btn btn-link border-0 transform-scale-h p-0"
+                            href={`#${item.anchor}`}
+                          >
+                            {item.button}
+                            <i className="icon-c icon-arrow-right" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                );
-              })}
+                    </a>
+                  );
+                })}
+            </div>
           </div>
         </div>
-
-        {this.props.seeMore ? (
-          <div className="text-center no-space">
-            <a
-              title="See more"
-              className="btn btn-link border-0 p-0 transform-scale-h"
-              href={process.env.PUBLIC_URL + "/works"}
-            >
-              See more
-              <i className="icon-c icon-arrow-right" />
-            </a>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
+        <GalleryTexts data={data} />
+      </>
     );
   }
 }
