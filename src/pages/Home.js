@@ -9,6 +9,8 @@ import PageTitleHome from "../blocks/page-title/PageTitleHome";
 import Services from "../blocks/services/Services";
 import ContactForm from "../components/form/ContactForm";
 import Location from "../blocks/location/location";
+import Loading from "../blocks/loading/Loading";
+import HowTo from "../blocks/howTo/HowTo";
 
 const Home = () => {
   document.body.classList.add("home");
@@ -31,46 +33,20 @@ const Home = () => {
         <meta name="format-detection" content="telephone=no" />
       </MetaTags>
 
-      {/* <Loading /> */}
+      <Loading />
 
       <Header />
 
       <main id="main" className="site-main">
         <PageTitleHome />
         <Services />
-        <section id="how" className="block spacer p-top-xl">
-          <div className="wrapper">
-            <h3>
-              ¿Cómo<span className="line">lo hacemos?.</span>
-            </h3>
 
-            <div className="row gutter-width-lg">
-              <div className="col-sm-6 col-6">
-                <div className="card border-0">
-                  <div className="card-body p-0">
-                    <h4>Presencial</h4>
-                    <p className="p-large">La consulta se realizará en....</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-6 col-6">
-                <div className="card border-0">
-                  <div className="card-body p-0">
-                    <h4>Online</h4>
-                    <p className="p-large">
-                      Que el espacio físico no sea un inconveniente para empezar
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* <HowTo /> */}
         <div className="wrapper row">
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <ContactForm />
-          </div>
-          <div className="col-md-6">
+          </div> */}
+          <div className="">
             <Location />
           </div>
         </div>

@@ -36,7 +36,10 @@ const Perinatal = () => {
       <Header />
 
       <main id="main" className="site-main">
-        <PageTitle title={`Perinatal`} />
+        <PageTitle
+          title={`Perinatal`}
+          quote={`La semilla no teme a la luz, ni a las tinieblas, usa ambas para crecer`}
+        />
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">

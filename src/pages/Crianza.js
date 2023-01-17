@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 
-// import Loading from '../blocks/loading/Loading';
+import Loading from "../blocks/loading/Loading";
 import Header from "../blocks/header/Header";
 import Footer from "../blocks/footer/Footer";
 
@@ -31,12 +31,15 @@ const Crianza = () => {
         <meta name="format-detection" content="telephone=no" />
       </MetaTags>
 
-      {/* <Loading /> */}
+      <Loading />
 
       <Header />
 
       <main id="main" className="site-main">
-        <PageTitle title={`Crianza`} />
+        <PageTitle
+          title={`Crianza`}
+          quote={`Otro mundo es posible, ahora tú eres su mundo`}
+        />
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
