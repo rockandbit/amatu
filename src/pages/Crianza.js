@@ -19,7 +19,7 @@ const Crianza = () => {
     <Fragment>
       <MetaTags>
         <meta charSet="UTF-8" />
-        <title>Crianza | Amatu</title>
+        <title>Amatu | Crianza</title>
 
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

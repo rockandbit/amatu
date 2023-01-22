@@ -6,7 +6,6 @@ import Header from "../blocks/header/Header";
 import Footer from "../blocks/footer/Footer";
 
 import Gallery from "../blocks/gallery/Gallery";
-import PageTitlePerinatal from "../blocks/page-title/PageTitlePerinatal";
 import ItemsData from "../data/perinatal/perinatalItems.json";
 import PageTitle from "../blocks/page-title/PageTitle";
 
@@ -19,7 +18,7 @@ const Perinatal = () => {
     <Fragment>
       <MetaTags>
         <meta charSet="UTF-8" />
-        <title>Perinatal | Amatu</title>
+        <title>Amatu | Perinatal</title>
 
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

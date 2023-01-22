@@ -8,6 +8,7 @@ import PageTitleHome from "../blocks/page-title/PageTitleHome";
 import Services from "../blocks/services/Services";
 import Location from "../blocks/location/location";
 import Loading from "../blocks/loading/Loading";
+import ItemsServices from "../data/services/services.json";
 import HowTo from "../blocks/howTo/HowTo";
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
     <Fragment>
       <MetaTags>
         <meta charSet="UTF-8" />
-        <title>Home | Amatu</title>
+        <title>Amatu | Home</title>
 
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,16 +38,16 @@ const Home = () => {
 
       <main id="main" className="site-main">
         <PageTitleHome />
-        <Services />
+        <Services data={ItemsServices} />
 
         {/* <HowTo /> */}
         <div className="wrapper row">
           {/* <div className="col-md-6">
             <ContactForm />
           </div> */}
-          <div className="">
+          {/* <div className="">
             <Location />
-          </div>
+          </div> */}
         </div>
         {/* <Contacts /> */}
       </main>

@@ -6,6 +6,7 @@ import {
   faMobileAlt,
   faEnvelope,
   faLocationDot,
+  faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
@@ -22,20 +23,22 @@ const Header = () => {
           {isMobile ? (
             <div className="d-flex flex-column align-items-end mr-4">
               <div className="gt3_header_builder_component gt3_header_builder_text_component align-items-center mb-2">
-                <FontAwesomeIcon
-                  icon={faMobileAlt}
-                  size="sm"
-                  className="mr-2"
-                  color="#C07766"
-                />
-                +34 608 48 58 81
+                <a href="tel:+34608485881">
+                  <FontAwesomeIcon
+                    icon={faPhoneAlt}
+                    size="sm"
+                    className="mr-2"
+                    color="#B1978D"
+                  />
+                  +34 608 48 58 81
+                </a>
               </div>
               <div className="gt3_header_builder_component gt3_header_builder_text_component">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   size="sm"
                   className="mr-2 ml-4"
-                  color="#C07766"
+                  color="#B1978D"
                 />
                 <a
                   href="https://instagram.com/psicologia.amatu"
@@ -49,50 +52,55 @@ const Header = () => {
             <>
               <div className="gt3_header_builder_component gt3_header_builder_text_component">
                 <p>
-                  <FontAwesomeIcon
-                    icon={faLocationDot}
-                    size="sm"
-                    className="mr-2 ml-4"
-                    color="#C07766"
-                  />
+                  <a
+                    href="https://goo.gl/maps/eAmQxNNSaeBnqJYX8"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      icon={faLocationDot}
+                      size="sm"
+                      className="mr-2 ml-4"
+                      color="#B1978D"
+                    />
+                  </a>
                   {/* Plaza Biteri 1, 1ºD, 20001, Donostia */}
                 </p>
               </div>
               <div className="gt3_header_builder_component gt3_header_builder_text_component">
                 <p>
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    size="sm"
-                    className="mr-2 ml-4"
-                    color="#C07766"
-                  />
-                  {/* <a href="mailto:psicologia.amatu@gmail.com">
-                    psicologia.amatu@gmail.com
-                  </a> */}
+                  <a href="mailto:psicologia.amatu@gmail.com">
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      size="sm"
+                      className="mr-2 ml-4"
+                      color="#B1978D"
+                    />
+                  </a>
                 </p>
               </div>
               <div className="gt3_header_builder_component gt3_header_builder_text_component align-items-center">
-                <FontAwesomeIcon
-                  icon={faMobileAlt}
-                  size="sm"
-                  className="mr-2 ml-4"
-                  color="#C07766"
-                />
+                <a href="#footer">
+                  <FontAwesomeIcon
+                    icon={faPhoneAlt}
+                    size="sm"
+                    className="mr-2 ml-4"
+                    color="#B1978D"
+                  />
+                </a>
                 {/* Llama +34 608 48 58 81 */}
               </div>
               <div className="gt3_header_builder_component gt3_header_builder_text_component">
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  size="sm"
-                  className="mr-2 ml-4"
-                  color="#C07766"
-                />
-                {/* <a
+                <a
                   href="https://instagram.com/psicologia.amatu"
                   target={`_blank`}
                 >
-                  psicologia.amatu
-                </a> */}
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    size="sm"
+                    className="mr-2 ml-4"
+                    color="#B1978D"
+                  />
+                </a>
               </div>
             </>
           )}

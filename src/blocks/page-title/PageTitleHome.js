@@ -19,7 +19,7 @@ const PageTitleHome = () => {
 
             <div className="spacer p-top-lg d-flex">
               <p className="p-large w-75 text-justify">
-                Es probable que si has llegado aquí sea porque has sentido que
+                Es probable que, si has llegado aquí sea porque has sentido que
                 hay maneras más amables y respetuosas de estar en el mundo.
                 <br />
                 Déjame felicitarte por querer darte una <b>oportunidad</b>,{" "}

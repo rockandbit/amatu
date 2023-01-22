@@ -1,29 +1,29 @@
 [
-    {
-        "id": "1",
-        "title": "La mejor guía para un acompañamiento respetuoso",
-        "link": "/perinatal",
-        "imgLink": "assets/img/servicio1.png",
-        "imgAlt": "La mejor guía para un acompañamiento respetuoso",
-        "categoryTitle": "Acompañamiento perinatal",
-        "categoryLink": "/servicios"
-    },
-    {
-        "id": "2",
-        "title": "Herramientas para una crianza desde el respeto mutuo",
-        "link": "/crianza",
-        "imgLink": "assets/img/servicio2.png",
-        "imgAlt": "Herramientas para una crianza desde el respeto mutuo",
-        "categoryTitle": "Crianza respetuosa",
-        "categoryLink": "/servicios"
-    },
-    {
-        "id": "3",
-        "title": "Cuéntame en qué puedo ayudarte",
-        "link": "/bienestar",
-        "imgLink": "assets/img/servicio2.png",
-        "imgAlt": "Cuéntame en qué puedo ayudarte",
-        "categoryTitle": "Bienestar emocional",
-        "categoryLink": "/servicios"
-    }
+  {
+    "id": "1",
+    "title": "La mejor guía para un acompañamiento respetuoso",
+    "link": "/perinatal",
+    "imgLink": "perinatal",
+    "imgAlt": "La mejor guía para un acompañamiento respetuoso",
+    "categoryTitle": "Acompañamiento perinatal",
+    "categoryLink": "/servicios"
+  },
+  {
+    "id": "2",
+    "title": "Herramientas para una crianza desde el respeto mutuo",
+    "link": "/crianza",
+    "imgLink": "crianza",
+    "imgAlt": "Herramientas para una crianza desde el respeto mutuo",
+    "categoryTitle": "Crianza respetuosa",
+    "categoryLink": "/servicios"
+  },
+  {
+    "id": "3",
+    "title": "Cuéntame en qué puedo ayudarte",
+    "link": "/bienestar",
+    "imgLink": "bienestar",
+    "imgAlt": "Cuéntame en qué puedo ayudarte",
+    "categoryTitle": "Bienestar emocional",
+    "categoryLink": "/servicios"
+  }
 ]

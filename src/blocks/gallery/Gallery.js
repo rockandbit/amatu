@@ -4,7 +4,7 @@ import ImagesLoaded from "imagesloaded";
 import PropTypes from "prop-types";
 import GalleryTexts from "./GalleryTexts";
 import { isMobile } from "react-device-detect";
-import perinatalImage from "../../assets/img/placeholder/perinatal_1.jpeg";
+import perinatalImage from "../../assets/img/placeholder/perinatal.jpg";
 
 class Gallery extends Component {
   constructor(props) {
@@ -70,9 +70,7 @@ class Gallery extends Component {
       <>
         {!isMobile ? (
           <div className="gallery">
-            <div
-              className={"gallery-item-wrapper" + this.props.paddingBottomClass}
-            >
+            <div className={"gallery-item-wrapper"}>
               <div className="gallery-items" ref={(c) => (this.grid = c)}>
                 {data &&
                   data.map((item, key) => {
