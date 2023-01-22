@@ -13,7 +13,7 @@ class GalleryTexts extends Component {
               return (
                 <div
                   id={item.anchor}
-                  className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
+                  className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12"
                 >
                   <div className="card border-0">
                     <div className="card-body p-0">

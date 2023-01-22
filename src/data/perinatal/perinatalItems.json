@@ -1,22 +1,22 @@
 [
   {
     "id": "1",
-    "title": "La no maternidad",
-    "description": "No todas las mujeres hemos nacido para ser madres, a veces toca decidirlo a contracorriente y otras la vida decide por ti. Te acompaño en este camino de frustraciones y de deseos. Aprende a colocar límites y a descubrir <b>tu decisión de cómo vivir tú vida.</b>",
-    "category": "gallery-item-visible product",
-    "link": "/works-inside",
-    "imgLink": "assets/img/placeholder/637x637.jpg",
-    "anchor": "no-maternidad",
-    "button": "Saber más"
-  },
-  {
-    "id": "2",
     "title": "La maternidad",
     "description": "Es un cambio que atraviesa todos los ejes de la vida y ésta sociedad cada día más desconectada y acelerada no lo pone fácil. Si eres de las que desea sentirse acompañada y transitar los cambios desde una mirada consciente, estoy para ti desde la búsqueda del embarazo hasta la crianza.",
     "category": "gallery-item-visible product",
     "link": "/works-inside",
     "imgLink": "assets/img/placeholder/637x637.jpg",
     "anchor": "maternidad",
+    "button": "Saber más"
+  },
+  {
+    "id": "2",
+    "title": "La no maternidad",
+    "description": "No todas las mujeres hemos nacido para ser madres, a veces toca decidirlo a contracorriente y otras la vida decide por ti. Te acompaño en este camino de frustraciones y de deseos. Aprende a colocar límites y a descubrir <b>tu decisión de cómo vivir tú vida.</b>",
+    "category": "gallery-item-visible product",
+    "link": "/works-inside",
+    "imgLink": "assets/img/placeholder/637x637.jpg",
+    "anchor": "no-maternidad",
     "button": "Saber más"
   },
   {

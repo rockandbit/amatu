@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import portada from "../../assets/img/portadaElisa.png";
+import { isMobile } from "react-device-detect";
 
 const PageTitleHome = () => {
   return (
@@ -32,7 +33,7 @@ const PageTitleHome = () => {
             </div>
           </div>
 
-          <div className="col col-2 d-none d-sm-block">
+          <div className={`col col-2 ${isMobile ? `ml-2` : ``}`}>
             <div className="d-flex">
               <div className="align-self-start w-100">
                 <div className="img object-fit">
@@ -40,35 +41,25 @@ const PageTitleHome = () => {
                     <img
                       src={portada}
                       className="img-fluid"
-                      alt="Luca Reynolds"
+                      alt="Elisa Valenzuela Mendoza"
                     />
                   </div>
                 </div>
-              </div>
-
-              <div className="align-self-end p-left-scroll">
-                <Link
-                  to="my-works"
-                  title="Scroll"
-                  spy={true}
-                  smooth={true}
-                  duration={900}
-                  className="btn btn-link btn-vertical transform-scale-h border-0 p-0 scroll-to-id d-flex"
-                  href="#my-works"
-                >
-                  <span className="vertical-text">
-                    <span>S</span>
-                    <span>c</span>
-                    <span>r</span>
-                    <span>o</span>
-                    <span>l</span>
-                    <span>l</span>
-                  </span>
-
-                  <span className="align-self-end">
-                    <i className="icon-c icon-arrow-down" />
-                  </span>
-                </Link>
+                <div className={isMobile ? `wrapper` : ``}>
+                  <p className="p-medium mt-4">
+                    Soy <b>psicoterapeuta</b> por vocación y por herencia.
+                    <br />
+                    Formada en terapias <b>humanistas</b>,{" "}
+                    <b>cognitivo-conductuales</b> y <b>corporales</b> desde hace
+                    más de 20 años y especializada hoy en día en{" "}
+                    <b>psicología</b>, terapia psicocorporal y{" "}
+                    <b>salud mental perinatal</b>.
+                    <br />
+                  </p>
+                  <blockquote className="text-right">
+                    Elisa Valenzuela Mendoza
+                  </blockquote>
+                </div>
               </div>
             </div>
           </div>

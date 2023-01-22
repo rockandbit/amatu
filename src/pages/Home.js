@@ -5,9 +5,7 @@ import Header from "../blocks/header/Header";
 import Footer from "../blocks/footer/Footer";
 
 import PageTitleHome from "../blocks/page-title/PageTitleHome";
-// import Contacts from '../blocks/contacts/Contacts';
 import Services from "../blocks/services/Services";
-import ContactForm from "../components/form/ContactForm";
 import Location from "../blocks/location/location";
 import Loading from "../blocks/loading/Loading";
 import HowTo from "../blocks/howTo/HowTo";

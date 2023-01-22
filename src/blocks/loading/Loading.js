@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../../assets/img/logo/amatu_nombre-01.png";
+import logo from "../../assets/img/logo/amatu_circulo-01.png";
 
 class Loading extends Component {
   performTimeConsumingTask = async () => {
@@ -36,8 +36,13 @@ class Loading extends Component {
         <div className="wrapper h-100">
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="loading-content">
-              <div className="logo logo-primary">
-                <img className="animated zoomin" src={logo} alt="Amatu logo" />
+              <div className="logo-primary">
+                <img
+                  className="animated zoomin"
+                  src={logo}
+                  alt="Amatu logo"
+                  width="100"
+                />
               </div>
             </div>
           </div>
