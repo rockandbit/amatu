@@ -24,9 +24,9 @@ class Loading extends Component {
       var ua = navigator.userAgent.toLowerCase();
       var isAndroid = ua.indexOf("android") > -1;
 
-      if (isAndroid) {
-        loading[0].style.display("none");
-      }
+      // if (isAndroid) {
+      //   loading[0].style.display("none");
+      // }
     }
   }
 

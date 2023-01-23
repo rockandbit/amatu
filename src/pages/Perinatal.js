@@ -18,7 +18,7 @@ const Perinatal = () => {
     <Fragment>
       <MetaTags>
         <meta charSet="UTF-8" />
-        <title>Amatu | Perinatal</title>
+        <title>Perinatal | Amatu</title>
 
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
