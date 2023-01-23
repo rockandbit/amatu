@@ -17,7 +17,7 @@ class Gallery extends Component {
   }
 
   handleClick(i, e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     this.setState({
       selected: i,
@@ -68,7 +68,7 @@ class Gallery extends Component {
     const data = this.props.data;
     return (
       <>
-        {!isMobile ? (
+        {/* {!isMobile ? (
           <div className="gallery">
             <div className={"gallery-item-wrapper"}>
               <div className="gallery-items" ref={(c) => (this.grid = c)}>
@@ -106,40 +106,42 @@ class Gallery extends Component {
               </div>
             </div>
           </div>
-        ) : (
-          <div className="gallery">
-            <div className="wrapper">
-              <ul className="gallery-filter list-unstyled no-space mb-4">
-                {data.map((item, key) => (
-                  <React.Fragment key={key}>
-                    <li>
-                      <a
-                        href={`#${item.anchor}`}
-                        title={item.title}
-                        className={
-                          "btn btn-link transform-scale-h click" +
-                          (key === this.state.selected ? " active" : "")
-                        }
-                        data-filter={item.filter}
-                      >
-                        {item.title}
-                      </a>
-                    </li>
+        ) : ( */}
+        <div className="gallery">
+          <div className="wrapper">
+            <ul className="gallery-filter list-unstyled no-space mb-4">
+              {data.map((item, key) => (
+                <React.Fragment key={key}>
+                  <li>
+                    <a
+                      href={`#${item.anchor}`}
+                      title={item.title}
+                      className={
+                        "btn btn-link transform-scale-h click" +
+                        (key === this.state.selected ? " active" : "")
+                      }
+                      onClick={(event) => {
+                        this.handleClick(key, event);
+                      }}
+                    >
+                      {item.title}
+                    </a>
+                  </li>
 
-                    <li>
-                      <span className="btn btn-link">-</span>
-                    </li>
-                  </React.Fragment>
-                ))}
-              </ul>
-            </div>
-            <div className="img object-fit">
-              <div className="object-fit-cover">
-                <img src={perinatalImage} alt={"Perinatal"} />
-              </div>
+                  <li>
+                    <span className="btn btn-link">-</span>
+                  </li>
+                </React.Fragment>
+              ))}
+            </ul>
+          </div>
+          <div className="img object-fit overflow-hidden">
+            <div className="object-fit-cover">
+              <img src={perinatalImage} alt={"Perinatal"} />
             </div>
           </div>
-        )}
+        </div>
+        {/* )} */}
         <GalleryTexts data={data} />
       </>
     );
