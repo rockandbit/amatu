@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Copyright from "../footer/Copyright";
 import Logo from "../logo/Logo";
-import LogoAmatu from "../../assets/img/logo/amatu-logo.png";
+import LogoAmatu from "../../assets/img/logo/amatu-logo-con.png";
 
 const FooterCell = () => {
   return (

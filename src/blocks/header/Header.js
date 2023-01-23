@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../blocks/logo/Logo";
-import LogoAmatu from "../../assets/img/logo/amatu-logo.png";
+import LogoAmatu from "../../assets/img/logo/amatu-logo.jpg";
 import { isMobile } from "react-device-detect";
 import {
   faEnvelope,
