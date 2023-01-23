@@ -42,7 +42,7 @@ const Perinatal = () => {
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
-            <Gallery data={ItemsData} />
+            <Gallery data={ItemsData} service={`perinatal`} texts />
           </div>
         </section>
       </main>

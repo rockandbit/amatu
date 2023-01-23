@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import _ from "lodash";
 import Isotope from "isotope-layout";
 import ImagesLoaded from "imagesloaded";
 import PropTypes from "prop-types";
 import GalleryTexts from "./GalleryTexts";
 import { isMobile } from "react-device-detect";
-import perinatalImage from "../../assets/img/placeholder/perinatal.jpg";
 
 class Gallery extends Component {
   constructor(props) {
@@ -66,6 +66,7 @@ class Gallery extends Component {
 
   render() {
     const data = this.props.data;
+    const service = this.props.service;
     return (
       <>
         {/* {!isMobile ? (
@@ -137,12 +138,15 @@ class Gallery extends Component {
           </div>
           <div className="img object-fit overflow-hidden">
             <div className="object-fit-cover">
-              <img src={perinatalImage} alt={"Perinatal"} />
+              <img
+                src={require(`../../assets/img/placeholder/${service}.jpg`)}
+                alt={_.capitalize(this.props.service)}
+              />
             </div>
           </div>
         </div>
         {/* )} */}
-        <GalleryTexts data={data} />
+        {this.props.texts ? <GalleryTexts data={data} /> : null}
       </>
     );
   }
