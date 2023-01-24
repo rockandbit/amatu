@@ -40,18 +40,15 @@ const Home = () => {
         <PageTitleHome />
         <Services data={ItemsServices} />
 
-        {/* <HowTo /> */}
-        <div className="wrapper row">
-          {/* <div className="col-md-6">
+        <HowTo />
+        {/* <div className="col-md-6">
             <ContactForm />
           </div> */}
-          {/* <div className="">
+        {/* <div className="">
             <Location />
           </div> */}
-        </div>
         {/* <Contacts /> */}
       </main>
-
       <Footer />
     </Fragment>
   );

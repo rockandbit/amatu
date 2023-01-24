@@ -111,37 +111,42 @@ class Gallery extends Component {
         <div className="gallery">
           <div className="wrapper">
             <ul className="gallery-filter list-unstyled no-space mb-4">
-              {data.map((item, key) => (
-                <React.Fragment key={key}>
-                  <li>
-                    <a
-                      href={`#${item.anchor}`}
-                      title={item.title}
-                      className={
-                        "btn btn-link transform-scale-h click" +
-                        (key === this.state.selected ? " active" : "")
-                      }
-                      onClick={(event) => {
-                        this.handleClick(key, event);
-                      }}
-                    >
-                      {item.title}
-                    </a>
-                  </li>
+              {this.props.menu &&
+                data.map((item, key) => (
+                  <React.Fragment key={key}>
+                    <li>
+                      <a
+                        href={`#${item.anchor}`}
+                        title={item.title}
+                        className={
+                          "btn btn-link transform-scale-h click" +
+                          (key === this.state.selected ? " active" : "")
+                        }
+                        onClick={(event) => {
+                          this.handleClick(key, event);
+                        }}
+                      >
+                        {item.title}
+                      </a>
+                    </li>
 
-                  <li>
-                    <span className="btn btn-link">-</span>
-                  </li>
-                </React.Fragment>
-              ))}
+                    <li>
+                      <span className="btn btn-link">-</span>
+                    </li>
+                  </React.Fragment>
+                ))}
             </ul>
           </div>
-          <div className="img object-fit overflow-hidden">
-            <div className="object-fit-cover">
-              <img
-                src={require(`../../assets/img/placeholder/${service}.jpg`)}
-                alt={_.capitalize(this.props.service)}
-              />
+          <div className="row gutter-width-lg single-content">
+            <div className="col-xl-12 col-lg-7 col-md-7 col-sm-12">
+              <div className="img object-fit">
+                <div className="object-fit-cover">
+                  <img
+                    src={require(`../../assets/img/placeholder/${service}.jpg`)}
+                    alt={_.capitalize(this.props.service)}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ const FooterCell = () => {
   return (
     <footer id="footer" className="site-footer">
       <div className="">
-        <div className="row py-5 px-2" style={{ backgroundColor: "#F2E3E0" }}>
+        <div className="row py-5 px-3" style={{ backgroundColor: "#F2E3E0" }}>
           <div className="col-2 d-flex justify-content-center align-items-center">
             <Logo image={LogoAmatu} />
           </div>
@@ -32,17 +32,15 @@ const FooterCell = () => {
                 </span>
               </div>
               <div className="mb-3 col-7">
-                <p>
-                  <FontAwesomeIcon
-                    icon={faLocationDot}
-                    size="lg"
-                    className="mr-2"
-                    style={{ color: "#000000" }}
-                  />
-                  <span style={{ color: "#000000", fontSize: "8px" }}>
-                    Plaza Biteri 1, 1ºD, 20001, Donostia
-                  </span>
-                </p>
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  size="lg"
+                  className="mr-1"
+                  style={{ color: "#000000" }}
+                />
+                <span style={{ color: "#000000", fontSize: "8px" }}>
+                  Plaza Biteri 1, 1ºD, 20001, Donostia
+                </span>
               </div>
             </div>
             <div className="row justify-content-between">
@@ -59,27 +57,25 @@ const FooterCell = () => {
                   className=""
                   style={{ color: "#000000" }}
                 >
-                  <span style={{ color: "#000000", fontSize: "10px" }}>
+                  <span style={{ color: "#000000", fontSize: "9px" }}>
                     psicologia.amatu
                   </span>
                 </a>
               </div>
               <div className="col-7">
-                <p>
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    size="lg"
-                    className="mr-2"
-                    style={{ color: "#000000" }}
-                  />
-                  <a
-                    href="mailto:psicologia.amatu@gmail.com"
-                    className=""
-                    style={{ color: "#000000", fontSize: "9px" }}
-                  >
-                    psicologia.amatu@gmail.com
-                  </a>
-                </p>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size="lg"
+                  className="mr-2"
+                  style={{ color: "#000000" }}
+                />
+                <a
+                  href="mailto:psicologia.amatu@gmail.com"
+                  className=""
+                  style={{ color: "#000000", fontSize: "9px" }}
+                >
+                  psicologia.amatu@gmail.com
+                </a>
               </div>
             </div>
           </div>

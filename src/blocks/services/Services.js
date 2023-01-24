@@ -42,7 +42,7 @@ class Services extends Component {
                                 <div className="object-fit-cover transform-scale-h">
                                   <img
                                     className=""
-                                    src={require(`../../assets/img/placeholder/${item.imgLink}.jpg`)}
+                                    src={require(`../../assets/img/services/${item.imgLink}.jpg`)}
                                     alt={item.imgAlt}
                                   />
                                 </div>

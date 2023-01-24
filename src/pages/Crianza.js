@@ -42,7 +42,7 @@ const Crianza = () => {
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
-            <Gallery data={ItemsData} service={`crianza`} />
+            <Gallery data={ItemsData} service={`crianza`} menu />
 
             <div className="block spacer p-top-xl" id="crianza-texto">
               <div className="row gutter-width-lg with-pb-lg">
