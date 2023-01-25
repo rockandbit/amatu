@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../../assets/img/logo/amatu_circulo-01.png";
+import logo from "../../assets/img/logo/amatu-loading.png";
 
 class Loading extends Component {
   performTimeConsumingTask = async () => {

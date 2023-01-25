@@ -8,13 +8,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Copyright from "../footer/Copyright";
 import Logo from "../logo/Logo";
-import LogoAmatu from "../../assets/img/logo/amatu-logo-con.png";
+import LogoAmatu from "../../assets/img/logo/amatu-logo-texto.png";
 
 const FooterCell = () => {
   return (
     <footer id="footer" className="site-footer">
       <div className="">
-        <div className="row py-5 px-3" style={{ backgroundColor: "#F2E3E0" }}>
+        <div className="row py-5 px-3" style={{ backgroundColor: "#f5e1dc" }}>
           <div className="col-2 d-flex justify-content-center align-items-center">
             <Logo image={LogoAmatu} />
           </div>
@@ -25,9 +25,9 @@ const FooterCell = () => {
                   icon={faPhoneAlt}
                   size="lg"
                   className="mr-2"
-                  style={{ color: "#000000" }}
+                  style={{ color: "#a1544d" }}
                 />
-                <span style={{ color: "#000000", fontSize: "10px" }}>
+                <span style={{ color: "#a1544d", fontSize: "10px" }}>
                   +34 608 48 58 81
                 </span>
               </div>
@@ -36,9 +36,9 @@ const FooterCell = () => {
                   icon={faLocationDot}
                   size="lg"
                   className="mr-1"
-                  style={{ color: "#000000" }}
+                  style={{ color: "#a1544d" }}
                 />
-                <span style={{ color: "#000000", fontSize: "8px" }}>
+                <span style={{ color: "#a1544d", fontSize: "8px" }}>
                   Plaza Biteri 1, 1ºD, 20001, Donostia
                 </span>
               </div>
@@ -49,15 +49,15 @@ const FooterCell = () => {
                   icon={faInstagram}
                   size="lg"
                   className="mr-2"
-                  style={{ color: "#000000" }}
+                  style={{ color: "#a1544d" }}
                 />
                 <a
                   href="https://instagram.com/psicologia.amatu"
                   target={`_blank`}
                   className=""
-                  style={{ color: "#000000" }}
+                  style={{ color: "#a1544d" }}
                 >
-                  <span style={{ color: "#000000", fontSize: "9px" }}>
+                  <span style={{ color: "#a1544d", fontSize: "9px" }}>
                     psicologia.amatu
                   </span>
                 </a>
@@ -67,12 +67,12 @@ const FooterCell = () => {
                   icon={faEnvelope}
                   size="lg"
                   className="mr-2"
-                  style={{ color: "#000000" }}
+                  style={{ color: "#a1544d" }}
                 />
                 <a
                   href="mailto:psicologia.amatu@gmail.com"
                   className=""
-                  style={{ color: "#000000", fontSize: "9px" }}
+                  style={{ color: "#a1544d", fontSize: "9px" }}
                 >
                   psicologia.amatu@gmail.com
                 </a>

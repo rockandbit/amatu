@@ -12,6 +12,7 @@ class GalleryTexts extends Component {
             data.map((item, key) => {
               return (
                 <div
+                  key={key}
                   id={item.anchor}
                   className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 text-justify"
                 >

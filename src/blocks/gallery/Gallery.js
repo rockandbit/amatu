@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import Isotope from "isotope-layout";
-import ImagesLoaded from "imagesloaded";
 import PropTypes from "prop-types";
 import GalleryTexts from "./GalleryTexts";
 import { isMobile } from "react-device-detect";
@@ -9,7 +7,6 @@ import { isMobile } from "react-device-detect";
 class Gallery extends Component {
   constructor(props) {
     super(props);
-    this.onFilterChange = this.onFilterChange.bind(this);
 
     this.state = {
       selected: 0,
@@ -24,44 +21,6 @@ class Gallery extends Component {
     });
 
     return false;
-  }
-
-  onFilterChange = (newFilter) => {
-    var gallery_items_name = this.grid;
-    var gallery_item_name = ".gallery-item";
-
-    if (this.iso === undefined) {
-      this.iso = new Isotope(gallery_items_name, {
-        itemSelector: gallery_item_name,
-        masonry: {
-          horizontalOrder: true,
-        },
-      });
-    }
-
-    if (newFilter === "*") {
-      this.iso.arrange({ filter: `*` });
-    } else {
-      this.iso.arrange({ filter: `.${newFilter}` });
-    }
-  };
-
-  componentDidMount() {
-    var gallery_items_name = this.grid;
-    var gallery_item_name = ".gallery-item";
-
-    var iso = new Isotope(gallery_items_name, {
-      itemSelector: gallery_item_name,
-      masonry: {
-        horizontalOrder: true,
-      },
-    });
-
-    var imgLoad = new ImagesLoaded(gallery_items_name);
-
-    imgLoad.on("progress", function (instance, image) {
-      iso.layout();
-    });
   }
 
   render() {

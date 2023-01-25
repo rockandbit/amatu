@@ -40,7 +40,7 @@ const Home = () => {
         <PageTitleHome />
         <Services data={ItemsServices} />
 
-        <HowTo />
+        {/* <HowTo /> */}
         {/* <div className="col-md-6">
             <ContactForm />
           </div> */}

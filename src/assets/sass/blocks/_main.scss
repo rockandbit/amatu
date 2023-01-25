@@ -6,26 +6,30 @@
 // All page
 =============================*/
 main {
-    padding-top: $main_padding_t;
-    padding-bottom: $main_padding_b;
+  padding-top: $main_padding_t;
+  padding-bottom: $main_padding_b;
 }
 
 /*=============================
 // Home page
 =============================*/
 .home {
-    main {
-        padding-bottom: 0;
-    }
+  main {
+    padding-bottom: 0;
+  }
+}
+
+.title h2 {
+  color: #a1544d;
 }
 
 /*=============================
 // Home services page
 =============================*/
 .home {
-    &.services {
-        main {
-            padding-bottom: $main_padding_b;
-        }
+  &.services {
+    main {
+      padding-bottom: $main_padding_b;
     }
+  }
 }

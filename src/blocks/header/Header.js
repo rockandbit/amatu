@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../blocks/logo/Logo";
-import LogoAmatu from "../../assets/img/logo/amatu-logo.jpg";
+import LogoAmatu from "../../assets/img/logo/amatu-logo.png";
 import { isMobile } from "react-device-detect";
 import {
   faEnvelope,
@@ -25,7 +25,7 @@ const Header = () => {
                 icon={faPhoneAlt}
                 size="lg"
                 className=""
-                color="#B1978D"
+                color="#a1544d"
               />
             </a>
           </div>
@@ -40,7 +40,7 @@ const Header = () => {
                   icon={faLocationDot}
                   size="lg"
                   className=""
-                  color="#B1978D"
+                  color="#a1544d"
                 />
               </a>
             </p>
@@ -51,7 +51,7 @@ const Header = () => {
                 icon={faInstagram}
                 size="lg"
                 className=""
-                color="#B1978D"
+                color="#a1544d"
               />
             </a>
           </div>
@@ -62,7 +62,7 @@ const Header = () => {
                   icon={faEnvelope}
                   size="lg"
                   className=""
-                  color="#B1978D"
+                  color="#a1544d"
                 />
               </a>
             </p>
