@@ -6,7 +6,6 @@ import Footer from "../blocks/footer/Footer";
 
 import PageTitleHome from "../blocks/page-title/PageTitleHome";
 import Services from "../blocks/services/Services";
-import Location from "../blocks/location/location";
 import Loading from "../blocks/loading/Loading";
 import ItemsServices from "../data/services/services.json";
 import HowTo from "../blocks/howTo/HowTo";
