@@ -13,11 +13,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^3.7.2",
-<<<<<<< HEAD
-    "axios": "^1.2.6",
-=======
     "axios": "^1.3.2",
->>>>>>> 2199c5a... manage 404 pages
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -68,10 +64,6 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "node-sass": "8.0.0"
-=======
     "node-sass": "^8.0.0"
->>>>>>> 2199c5a... manage 404 pages
   }
 }
