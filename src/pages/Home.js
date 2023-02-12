@@ -37,15 +37,6 @@ const Home = () => {
       <main id="main" className="site-main">
         <PageTitleHome />
         <Services data={ItemsServices} />
-
-        {/* <HowTo /> */}
-        {/* <div className="col-md-6">
-            <ContactForm />
-          </div> */}
-        {/* <div className="">
-            <Location />
-          </div> */}
-        {/* <Contacts /> */}
       </main>
       <Footer />
     </Fragment>

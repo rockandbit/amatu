@@ -4,9 +4,9 @@ import { Component } from "react";
 class Services extends Component {
   constructor(props) {
     super(props);
+    this.data = props.data;
   }
   render() {
-    const data = this.props.data;
     return (
       <>
         <section id="services" className="block spacer p-top-xl">
@@ -19,8 +19,8 @@ class Services extends Component {
           <div className="bg-gray-light ptb-services">
             <div className="wrapper">
               <div className="row gutter-width-lg">
-                {data &&
-                  data.map((item, key) => {
+                {this.data &&
+                  this.data.map((item, key) => {
                     return (
                       <div
                         key={key}
