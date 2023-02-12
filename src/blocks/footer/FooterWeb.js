@@ -38,7 +38,7 @@ const FooterWeb = () => {
                     style={{ color: "#a1544d" }}
                   />
                   <span style={{ color: "#a1544d" }}>
-                    Plaza Biteri 1, 1ºD, 20001, Donostia
+                    Plaza Biteri 1, Entresuelo D, 20001, Donostia
                   </span>
                 </p>
               </div>
