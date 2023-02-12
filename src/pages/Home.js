@@ -8,7 +8,6 @@ import PageTitleHome from "../blocks/page-title/PageTitleHome";
 import Services from "../blocks/services/Services";
 import Loading from "../blocks/loading/Loading";
 import ItemsServices from "../data/services/services.json";
-import HowTo from "../blocks/howTo/HowTo";
 
 const Home = () => {
   document.body.classList.add("home");
