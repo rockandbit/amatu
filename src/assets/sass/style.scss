@@ -6,6 +6,8 @@
 // @version 1.2.0
 =================================================*/
 
+@use "sass:meta";
+
 //=================================================
 // Theme variables
 //=================================================
@@ -107,147 +109,74 @@
 //@import '../icons/css/oxer.css';
 //@import '../icons/css/animation.css';
 
-@import '../icons/sass/oxer-embedded';
+@import "../icons/sass/oxer-embedded";
 
 /*=================================================
 // #2 Bootstrap settings
 =================================================*/
 /*=============================
-// #2.1 Style reboot
+// Bootstrap 4 legacy import (overrides above will apply)
 =============================*/
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/reboot";
-
-/*=============================
-// #2.2 Images
-=============================*/
-@import "../../../node_modules/bootstrap/scss/images";
-
-/*=============================
-// #2.3 Code
-=============================*/
-@import "../../../node_modules/bootstrap/scss/code";
-
-/*=============================
-// #2.4 Grid
-=============================*/
-@import "../../../node_modules/bootstrap/scss/grid";
-
-/*=============================
-// #2.5 Forms
-=============================*/
-@import "../../../node_modules/bootstrap/scss/forms";
-
-/*=============================
-// #2.6 Buttons
-=============================*/
-@import "../../../node_modules/bootstrap/scss/buttons";
-
-/*=============================
-// #2.7 Transitions
-=============================*/
-@import "../../../node_modules/bootstrap/scss/transitions";
-
-/*=============================
-// #2.8 Input group
-=============================*/
-@import "../../../node_modules/bootstrap/scss/input-group";
-
-/*=============================
-// #2.9 Custom forms
-=============================*/
-@import "../../../node_modules/bootstrap/scss/custom-forms";
-
-/*=============================
-// #2.10 Card
-=============================*/
-@import "../../../node_modules/bootstrap/scss/card";
-
-/*=============================
-// #2.11 Alert
-=============================*/
-@import "../../../node_modules/bootstrap/scss/alert";
-
-/*=============================
-// #2.12 List group
-=============================*/
-@import "../../../node_modules/bootstrap/scss/list-group";
-
-/*=============================
-// #2.13 Modal
-=============================*/
-@import "../../../node_modules/bootstrap/scss/modal";
-
-/*=============================
-// #2.14 Utilities
-=============================*/
-@import "../../../node_modules/bootstrap/scss/utilities";
-
-/*=============================
-// #2.15 Pagination
-=============================*/
-@import "../../../node_modules/bootstrap/scss/pagination";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 /*=================================================
 // #3 Theme default style
 =================================================*/
 html {
-    -webkit-overflow-scrolling: touch;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
-    
-    @media #{$media_xl} {
-        font-size: 14px;
-    }
-    
-    @media #{$media_sm} {
-        font-size: 12px;
-    }
+  -webkit-overflow-scrolling: touch;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+
+  @media #{$media_xl} {
+    font-size: 14px;
+  }
+
+  @media #{$media_sm} {
+    font-size: 12px;
+  }
 }
 
 body {
-    background-color: $body_background_color;
-    font-size: 16px;
-    min-width: 320px;
-    
-    @media #{$media_xl} {
-        font-size: 14px;
-    }
-    
-    @media #{$media_sm} {
-        font-size: 12px;
-    }
+  background-color: $body_background_color;
+  font-size: 16px;
+  min-width: 320px;
+
+  @media #{$media_xl} {
+    font-size: 14px;
+  }
+
+  @media #{$media_sm} {
+    font-size: 12px;
+  }
 }
 
 ::selection {
-    background: $body_main_element_color;
+  background: $body_main_element_color;
 }
 
 .wrapper {
-    max-width: $wrapper_max_w;
-    margin: auto;
-    padding-left: 6.88rem;
-    padding-right: 6.88rem;
-    
-    @media #{$media_xxl} {
-        padding-left: 3.75rem;
-        padding-right: 3.75rem;
-    }
-    
-    @media #{$media_xl} {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
-    
-    @media #{$media_sm} {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
+  max-width: $wrapper_max_w;
+  margin: auto;
+  padding-left: 6.88rem;
+  padding-right: 6.88rem;
+
+  @media #{$media_xxl} {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
+  @media #{$media_xl} {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  @media #{$media_sm} {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 /*=============================
@@ -462,8 +391,9 @@ body {
 
 /*=================================================
 // #9 Animate
+// Import as plain CSS to avoid Sass @import deprecation
 =================================================*/
-@import "../../../node_modules/animate.css/animate";
+@import "../../../node_modules/animate.css/animate.css";
 
 //=================================================
 // DEV

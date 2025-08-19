@@ -1,35 +1,20 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import page404 from "./pages/404";
-import Perinatal from "./pages/Perinatal";
-import Crianza from "./pages/Crianza";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 import Bienestar from "./pages/Bienestar";
+import Crianza from "./pages/Crianza";
+import Home from "./pages/Home";
+import Perinatal from "./pages/Perinatal";
+import React from "react";
+import page404 from "./pages/404";
 
 function App() {
   return (
-    <Router>
+    <Router basename={"/"}>
       <Switch>
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/"}`}
-          component={Home}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/perinatal"}`}
-          component={Perinatal}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/crianza"}`}
-          component={Crianza}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/bienestar"}`}
-          component={Bienestar}
-        />
+        <Route exact path={`/`} component={Home} />
+        <Route exact path={`/perinatal`} component={Perinatal} />
+        <Route exact path={`/crianza`} component={Crianza} />
+        <Route exact path={`/bienestar`} component={Bienestar} />
         <Route exact component={page404} />
       </Switch>
     </Router>
