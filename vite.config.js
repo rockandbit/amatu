@@ -9,8 +9,15 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         quietDeps: true,
-        // Valid Sass deprecations to silence for Bootstrap 4 and old syntax
-        silenceDeprecations: ["legacy-js-api", "global-builtin", "import"],
+        // Silence Sass deprecations coming from Bootstrap
+        silenceDeprecations: [
+          "legacy-js-api",
+          "global-builtin",
+          "import",
+          "color-functions",
+          "abs-percent",
+          "mixed-decls",
+        ],
       },
     },
   },

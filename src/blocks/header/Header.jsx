@@ -31,7 +31,7 @@ const Header = () => {
           <div className="px-3">
             <p>
               <a
-                href="https://maps.app.goo.gl/Zqmu8admkVBmUcZq5"
+                href="https://maps.app.goo.gl/b2oadT7H1tfV8gyD7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
