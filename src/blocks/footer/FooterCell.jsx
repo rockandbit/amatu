@@ -8,44 +8,76 @@ import Copyright from "./Copyright";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../logo/Logo";
 import LogoAmatu from "../../assets/img/logo/amatu-logo-texto.png";
+// FooterCell.jsx
 import React from "react";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const FooterCell = () => {
   return (
-    <footer id="footer" className="site-footer">
-      <div className="">
+    <footer id="footer" className="site-footer" role="contentinfo">
+      <div
+        className=""
+        itemScope
+        itemType="https://schema.org/LocalBusiness"
+        aria-label="Información de contacto"
+      >
+        {/* Datos estructurados visibles + microdatos */}
+        <meta itemProp="name" content="Amatu Psicología" />
+        <link itemProp="url" href="https://psicologiaamatu.com/" />
+
         <div className="row py-5 px-3" style={{ backgroundColor: "#f5e1dc" }}>
           <div className="col-2 d-flex justify-content-center align-items-center">
-            <Logo image={LogoAmatu} />
+            <a href="/" aria-label="Ir a la página de inicio">
+              <Logo image={LogoAmatu} alt="Amatu Psicología - Donostia" />
+            </a>
           </div>
+
           <div className="col-10 text-center align-items-center py-2">
+            {/* Fila 1: teléfono + dirección */}
             <div className="row justify-content-between">
-              <div className="mb-3 col-5">
+              <div className="mb-3 col-5 d-flex align-items-center justify-content-center">
                 <FontAwesomeIcon
                   icon={faPhoneAlt}
                   size="lg"
                   className="mr-2"
                   style={{ color: "#a1544d" }}
                 />
-                <span style={{ color: "#a1544d", fontSize: "10px" }}>
+                <a
+                  href="tel:+34608485881"
+                  itemProp="telephone"
+                  aria-label="Llamar al 608 48 58 81"
+                  style={{ color: "#a1544d", fontSize: "10px" }}
+                >
                   +34 608 48 58 81
-                </span>
+                </a>
               </div>
-              <div className="mb-3 col-7">
+
+              <div className="mb-3 col-7 d-flex align-items-center justify-content-center">
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   size="lg"
                   className="mr-1"
                   style={{ color: "#a1544d" }}
                 />
-                <span style={{ color: "#a1544d", fontSize: "8px" }}>
-                  Plaza del centenario 2, 1º Izq, 20006, Donostia
-                </span>
+                <address
+                  className="m-0"
+                  itemProp="address"
+                  itemScope
+                  itemType="https://schema.org/PostalAddress"
+                  style={{ color: "#a1544d", fontSize: "8px" }}
+                >
+                  <span itemProp="streetAddress">
+                    Plaza del Centenario 2, 1º Izq
+                  </span>
+                  , <span itemProp="postalCode">20006</span>,{" "}
+                  <span itemProp="addressLocality">Donostia</span>
+                </address>
               </div>
             </div>
+
+            {/* Fila 2: Instagram + email */}
             <div className="row justify-content-between">
-              <div className="col-5">
+              <div className="col-5 d-flex align-items-center justify-content-center">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   size="lg"
@@ -54,8 +86,9 @@ const FooterCell = () => {
                 />
                 <a
                   href="https://instagram.com/psicologia.amatu"
-                  target={`_blank`}
-                  className=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Perfil de Instagram de Amatu Psicología"
                   style={{ color: "#a1544d" }}
                 >
                   <span style={{ color: "#a1544d", fontSize: "9px" }}>
@@ -63,7 +96,8 @@ const FooterCell = () => {
                   </span>
                 </a>
               </div>
-              <div className="col-7">
+
+              <div className="col-7 d-flex align-items-center justify-content-center">
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   size="lg"
@@ -72,7 +106,8 @@ const FooterCell = () => {
                 />
                 <a
                   href="mailto:psicologia.amatu@gmail.com"
-                  className=""
+                  itemProp="email"
+                  aria-label="Enviar correo a psicologia.amatu@gmail.com"
                   style={{ color: "#a1544d", fontSize: "9px" }}
                 >
                   psicologia.amatu@gmail.com
@@ -81,16 +116,11 @@ const FooterCell = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="wrapper">
-        <div className="row justify-content-center">
-          <Copyright />
 
-          {/* <div className="col-xl-8 col-lg-8 align-self-center">
-                        <div className="menu float-xl-right float-lg-right">
-                            <FooterMenu />
-                        </div>
-                    </div> */}
+        <div className="wrapper">
+          <div className="row justify-content-center">
+            <Copyright />
+          </div>
         </div>
       </div>
     </footer>

@@ -3,19 +3,34 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Bienestar from "./pages/Bienestar.jsx";
 import Crianza from "./pages/Crianza.jsx";
 import Home from "./pages/Home.jsx";
+import Page404 from "./pages/404.jsx";
 import Perinatal from "./pages/Perinatal.jsx";
 import React from "react";
-import page404 from "./pages/404.jsx";
+import { routes } from "./routes";
 
 function App() {
   return (
     <Router basename={"/"}>
       <Switch>
-        <Route exact path={`/`} component={Home} />
-        <Route exact path={`/perinatal`} component={Perinatal} />
-        <Route exact path={`/crianza`} component={Crianza} />
-        <Route exact path={`/bienestar`} component={Bienestar} />
-        <Route exact component={page404} />
+        {routes.map((r) => (
+          <Route
+            exact
+            key={r.path}
+            path={r.path}
+            component={
+              r.component === "Home"
+                ? Home
+                : r.component === "Perinatal"
+                ? Perinatal
+                : r.component === "Crianza"
+                ? Crianza
+                : r.component === "Bienestar"
+                ? Bienestar
+                : null
+            }
+          />
+        ))}
+        <Route path="*" component={Page404} />
       </Switch>
     </Router>
   );

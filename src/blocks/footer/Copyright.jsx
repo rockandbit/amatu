@@ -1,11 +1,15 @@
-import React from 'react';
+// Copyright.jsx
+import React from "react";
 
 const Copyright = () => {
-    return (
-        <div className="copyright">
-            <p>2023 © Amatu. Todos los derechos reservados</p>
-        </div>
-    );
+  const year = new Date().getFullYear();
+  return (
+    <div className="copyright text-center py-3">
+      <p className="m-0">
+        <small>{year} © Amatu. Todos los derechos reservados</small>
+      </p>
+    </div>
+  );
 };
 
 export default Copyright;

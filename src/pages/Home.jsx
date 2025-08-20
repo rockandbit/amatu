@@ -1,36 +1,65 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 
 import Footer from "../blocks/footer/Footer";
 import Header from "../blocks/header/Header.jsx";
+import { Helmet } from "react-helmet-async";
 import ItemsServices from "../data/services/services.json";
 import Loading from "../blocks/loading/Loading";
-import MetaTags from "react-meta-tags";
+import LocalBusinessLD from "../seo/LocalBusinessLD.jsx";
 import PageTitleHome from "../blocks/page-title/PageTitleHome";
 import Services from "../blocks/services/Services";
 
 const Home = () => {
-  document.body.classList.add("home");
-  document.body.classList.add("bg-fixed");
-  document.body.classList.add("bg-line");
+  useEffect(() => {
+    document.body.classList.add("home", "bg-fixed", "bg-line");
+  }, []);
 
   return (
     <Fragment>
-      <MetaTags>
+      <Helmet>
         <meta charSet="UTF-8" />
-        <title>Inicio | Amatu</title>
+        <title>Psicología en Donostia | Amatu</title>
+        <meta
+          name="description"
+          content="Psicoterapia para bienestar emocional, crianza y maternidad perinatal en Donostia y online. Acompañamiento cercano, profesional y humano."
+        />
+        <meta
+          name="keywords"
+          content="psicología Donostia, terapia online, maternidad, crianza, perinatal, bienestar"
+        />
+        <link rel="canonical" href="https://psicologiamatu.com/" />
 
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="robots" content="index, follow, noodp" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="google" content="notranslate" />
-        <meta name="format-detection" content="telephone=no" />
-      </MetaTags>
+        {/* SEO Robots */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Social */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Psicología en Donostia | Amatu" />
+        <meta
+          property="og:description"
+          content="Acompañamiento en bienestar, crianza y maternidad. Terapia presencial en Donostia y online."
+        />
+        <meta property="og:url" content="https://psicologiamatu.com/" />
+        <meta
+          property="og:image"
+          content="https://psicologiamatu.com/img/og-image-home.jpg"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Psicología en Donostia | Amatu" />
+        <meta
+          name="twitter:description"
+          content="Acompañamiento en bienestar, crianza y maternidad. Terapia presencial en Donostia y online."
+        />
+        <meta
+          name="twitter:image"
+          content="https://psicologiamatu.com/img/og-image-home.jpg"
+        />
+      </Helmet>
 
       <Loading />
-
+      <LocalBusinessLD />
       <Header />
 
       <main id="main" className="site-main">
