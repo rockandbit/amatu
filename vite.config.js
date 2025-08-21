@@ -21,11 +21,4 @@ export default defineConfig({
       },
     },
   },
-  define: {
-    // Shim CRA envs used in the codebase
-    "process.env": {},
-    // In CRA, PUBLIC_URL defaults to empty string. Keep that to avoid // in paths.
-    "process.env.PUBLIC_URL": '""',
-    "process.env.NODE_ENV": "import.meta.env.MODE",
-  },
 });
