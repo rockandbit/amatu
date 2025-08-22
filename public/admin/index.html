@@ -27,7 +27,7 @@
         // Pantalla de login
         authComponent() {
           const React = window.React;
-          return class LoginView extends React.Component {
+          class LoginView extends React.Component {
             componentDidMount() {
               window.location.href = "/api/auth/start";
             }
@@ -38,7 +38,8 @@
                 "Redirigiendo al inicio de sesión…"
               );
             }
-          };
+          }
+          return { component: LoginView, props: {} };
         }
 
         authenticate() {
