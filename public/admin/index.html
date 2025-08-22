@@ -11,6 +11,10 @@
     <!-- React + ReactDOM (UMD) -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      window.React = React;
+      window.ReactDOM = ReactDOM;
+    </script>
     <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
   </head>
@@ -27,17 +31,15 @@
         // Pantalla de login
         authComponent() {
           const React = window.React;
-          class LoginView extends React.Component {
-            componentDidMount() {
+          function LoginView() {
+            React.useEffect(() => {
               window.location.href = "/api/auth/start";
-            }
-            render() {
-              return React.createElement(
-                "div",
-                null,
-                "Redirigiendo al inicio de sesión…"
-              );
-            }
+            }, []);
+            return React.createElement(
+              "div",
+              null,
+              "Redirigiendo al inicio de sesión…"
+            );
           }
           return { component: LoginView, props: {} };
         }
