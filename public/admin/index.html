@@ -41,7 +41,7 @@
               "Redirigiendo al inicio de sesión…"
             );
           }
-          return { component: LoginView, props: {} };
+          return LoginView; // ✅ ya no devolvemos objeto
         }
 
         authenticate() {
