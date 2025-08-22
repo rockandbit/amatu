@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
+
+    <!-- 1) React y ReactDOM UMD -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- 2) Decap y arranque manual -->
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
@@ -12,17 +18,15 @@
   <body>
     <noscript>Este panel requiere JavaScript.</noscript>
     <script>
-      // Backend bridge mínimo
       class BridgeBackend {
         constructor(config) {
           this.apiBase = "/api/cms";
         }
+
         authComponent() {
-          // Devuelve un componente React para la pantalla de login
           const React = window.React;
           class LoginView extends React.Component {
             componentDidMount() {
-              // Redirige a tu formulario de login del bridge
               window.location.href = "/api/auth/start";
             }
             render() {
@@ -36,15 +40,14 @@
           return { component: LoginView, props: {} };
         }
         authenticate() {
-          // Si Decap llama a authenticate(), también redirigimos
           window.location.href = "/api/auth/start";
           return Promise.resolve();
         }
         logout() {
-          // Cerrar sesión del bridge
           window.location.href = "/api/auth/logout";
           return Promise.resolve();
         }
+
         async auth() {
           const r = await fetch(this.apiBase + "/me", {
             credentials: "include",
@@ -55,6 +58,7 @@
         async restoreUser() {
           return this.auth();
         }
+
         async entriesByFolder({ folder }) {
           const r = await fetch(
             `${this.apiBase}/entriesByFolder?folder=${encodeURIComponent(
@@ -118,7 +122,7 @@
       }
 
       window.CMS.registerBackend("bridge", BridgeBackend);
-      window.CMS.init();
+      window.CMS.init(); /* leerá /admin/config.yml -> backend.name: bridge */
     </script>
   </body>
 </html>
