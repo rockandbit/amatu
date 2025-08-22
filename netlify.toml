@@ -1,0 +1,30 @@
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Admin primero
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Endpoints del bridge
+[[redirects]]
+  from = "/api/auth/*"
+  to = "/.netlify/functions/auth"
+  status = 200
+
+[[redirects]]
+  from = "/api/cms/*"
+  to = "/.netlify/functions/cms-proxy"
+  status = 200
+
+# SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

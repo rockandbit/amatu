@@ -1,0 +1,17 @@
+backend:
+  name: bridge
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "src/content/pages/perinatal.md"
+        label: "Perinatal"
+        name: "perinatal"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
