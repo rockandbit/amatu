@@ -17,6 +17,34 @@
         constructor(config) {
           this.apiBase = "/api/cms";
         }
+        authComponent() {
+          // Devuelve un componente React para la pantalla de login
+          const React = window.React;
+          class LoginView extends React.Component {
+            componentDidMount() {
+              // Redirige a tu formulario de login del bridge
+              window.location.href = "/api/auth/start";
+            }
+            render() {
+              return React.createElement(
+                "div",
+                null,
+                "Redirigiendo al inicio de sesión…"
+              );
+            }
+          }
+          return { component: LoginView, props: {} };
+        }
+        authenticate() {
+          // Si Decap llama a authenticate(), también redirigimos
+          window.location.href = "/api/auth/start";
+          return Promise.resolve();
+        }
+        logout() {
+          // Cerrar sesión del bridge
+          window.location.href = "/api/auth/logout";
+          return Promise.resolve();
+        }
         async auth() {
           const r = await fetch(this.apiBase + "/me", {
             credentials: "include",
@@ -90,18 +118,7 @@
       }
 
       window.CMS.registerBackend("bridge", BridgeBackend);
-      (async function boot() {
-        try {
-          const ok = await fetch("/api/cms/me", { credentials: "include" });
-          if (!ok.ok) {
-            window.location.href = "/api/auth/start";
-            return;
-          }
-          window.CMS.init(); // ahora sí lee /admin/config.yml
-        } catch (e) {
-          window.location.href = "/api/auth/start";
-        }
-      })();
+      window.CMS.init();
     </script>
   </body>
 </html>
