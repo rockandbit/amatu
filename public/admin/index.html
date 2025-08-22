@@ -4,25 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
-
-    <!-- 1) React y ReactDOM UMD -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-
-    <!-- 2) Decap y arranque manual -->
     <script>
+      // Activar inicialización manual de Decap CMS
       window.CMS_MANUAL_INIT = true;
     </script>
+    <!-- React + ReactDOM (UMD) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
   </head>
   <body>
     <noscript>Este panel requiere JavaScript.</noscript>
+
     <script>
+      // Backend bridge mínimo
       class BridgeBackend {
         constructor(config) {
           this.apiBase = "/api/cms";
         }
 
+        // Pantalla de login
         authComponent() {
           const React = window.React;
           return class LoginView extends React.Component {
@@ -38,10 +40,12 @@
             }
           };
         }
+
         authenticate() {
           window.location.href = "/api/auth/start";
           return Promise.resolve();
         }
+
         logout() {
           window.location.href = "/api/auth/logout";
           return Promise.resolve();
@@ -54,6 +58,7 @@
           if (!r.ok) throw new Error("Not authenticated");
           return { token: "session" };
         }
+
         async restoreUser() {
           return this.auth();
         }
@@ -67,6 +72,7 @@
           );
           return r.json();
         }
+
         async entriesByFiles({ files }) {
           const r = await fetch(this.apiBase + "/entriesByFiles", {
             method: "POST",
@@ -76,6 +82,7 @@
           });
           return r.json();
         }
+
         async getEntry({ path }) {
           const r = await fetch(
             `${this.apiBase}/entry?path=${encodeURIComponent(path)}`,
@@ -83,6 +90,7 @@
           );
           return r.json();
         }
+
         async persistEntry({ entry, assets }) {
           const r = await fetch(this.apiBase + "/persistEntry", {
             method: "POST",
@@ -93,12 +101,14 @@
           if (!r.ok) throw new Error("Persist failed");
           return r.json();
         }
+
         async getMedia() {
           const r = await fetch(this.apiBase + "/media", {
             credentials: "include",
           });
           return r.json();
         }
+
         async persistMedia({ fileObj }) {
           const b = new FormData();
           b.append("file", fileObj);
@@ -109,6 +119,7 @@
           });
           return r.json();
         }
+
         async deleteFile({ path }) {
           const r = await fetch(this.apiBase + "/deleteFile", {
             method: "POST",
@@ -120,8 +131,22 @@
         }
       }
 
+      // Registrar backend
       window.CMS.registerBackend("bridge", BridgeBackend);
-      window.CMS.init(); /* leerá /admin/config.yml -> backend.name: bridge */
+
+      // Inicialización: verificar sesión antes
+      (async function boot() {
+        try {
+          const ok = await fetch("/api/cms/me", { credentials: "include" });
+          if (!ok.ok) {
+            window.location.href = "/api/auth/start";
+            return;
+          }
+          window.CMS.init();
+        } catch (e) {
+          window.location.href = "/api/auth/start";
+        }
+      })();
     </script>
   </body>
 </html>
