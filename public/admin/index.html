@@ -6,16 +6,11 @@
     <title>Admin</title>
   </head>
   <body>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
     <script>
-      // Botón de login (simple): /api/auth/start
-      window.CMS.registerAdditionalLink({
-        id: "login",
-        title: "Iniciar sesión",
-        data: { href: "/api/auth/start" },
-        options: { target: "_self" },
-      });
-
       // Backend bridge mínimo
       class BridgeBackend {
         constructor(config) {
@@ -92,7 +87,16 @@
           return r.json();
         }
       }
+      // Botón de login (simple): /api/auth/start
+      window.CMS.registerAdditionalLink({
+        id: "login",
+        title: "Iniciar sesión",
+        data: { href: "/api/auth/start" },
+        options: { target: "_self" },
+      });
+
       window.CMS.registerBackend("bridge", BridgeBackend);
+      window.CMS.init();
     </script>
   </body>
 </html>
