@@ -145,11 +145,7 @@
             window.location.href = "/api/auth/start";
             return;
           }
-          window.CMS.init({
-            config: {
-              backend: { name: "bridge" },
-            },
-          });
+          window.CMS.init();
         } catch (e) {
           window.location.href = "/api/auth/start";
         }
