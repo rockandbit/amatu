@@ -25,15 +25,17 @@
 
         authComponent() {
           const React = window.React;
-          return function LoginView() {
-            React.useEffect(() => {
+          return class LoginView extends React.Component {
+            componentDidMount() {
               window.location.href = "/api/auth/start";
-            }, []);
-            return React.createElement(
-              "div",
-              null,
-              "Redirigiendo al inicio de sesión…"
-            );
+            }
+            render() {
+              return React.createElement(
+                "div",
+                null,
+                "Redirigiendo al inicio de sesión…"
+              );
+            }
           };
         }
         authenticate() {
