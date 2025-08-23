@@ -5,7 +5,7 @@ backend:
 media_folder: "public/uploads" # dónde se guardan en el repo
 public_folder: "/uploads" # cómo se referencian en la web
 
-publish_mode: editorial_workflow # opcional, permite "Draft → Review → Publish"
+publish_mode: simple # opcional, permite "Draft → Review → Publish"
 
 collections:
   - name: "pages"
