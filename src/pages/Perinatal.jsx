@@ -1,21 +1,21 @@
-// src/pages/Perinatal.jsx
 import React, { Fragment, useEffect, useMemo } from "react";
 
 import Footer from "../blocks/footer/Footer";
 import Gallery from "../blocks/gallery/Gallery";
 import Header from "../blocks/header/Header.jsx";
 import { Helmet } from "react-helmet-async";
-import ItemsData from "../data/perinatal/perinatalItems.json";
+import ItemsData from "../data/perinatal/perinatalItems.json"; // 👈 lista de secciones
 import Loading from "../blocks/loading/Loading";
 import LocalBusinessLD from "../seo/LocalBusinessLD.jsx";
 import PageTitle from "../blocks/page-title/PageTitle";
+import data from "../data/perinatal.json"; // 👈 SEO + heroImage
+import parse from "html-react-parser";
 
-const SITE_URL = "https://psicologiamatu.com"; // ← cámbialo por tu dominio real
+const SITE_URL = "https://psicologiamatu.com";
 const PAGE_URL = `${SITE_URL}/perinatal`;
-const OG_IMAGE = `${SITE_URL}/assets/img/og/perinatal-og.jpg`; // ← sube una imagen 1200x630
+const OG_IMAGE = `${SITE_URL}/assets/img/og/perinatal-og.jpg`;
 
 const Perinatal = () => {
-  // Mueve las clases del <body> a un efecto (mejor rendimiento)
   useEffect(() => {
     document.body.classList.add("archive", "bg-fixed", "bg-line");
     return () => {
@@ -23,7 +23,6 @@ const Perinatal = () => {
     };
   }, []);
 
-  // JSON-LD: Service (Perinatal) + Breadcrumbs
   const serviceLd = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -66,43 +65,24 @@ const Perinatal = () => {
     <Fragment>
       <Helmet>
         <meta charSet="UTF-8" />
-        <title>Psicología perinatal en Donostia y online | Amatu</title>
-        <meta
-          name="description"
-          content="Acompañamiento psicológico perinatal: embarazo, parto, posparto y duelo gestacional. Espacio seguro, cercano y profesional en Donostia y online."
-        />
+        <title>{data.seoTitle}</title>
+        <meta name="description" content={data.seoDescription} />
         <link rel="canonical" href={PAGE_URL} />
 
-        {/* Robots */}
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Psicología perinatal | Amatu Psicología"
-        />
-        <meta
-          property="og:description"
-          content="Acompañamiento emocional en embarazo, posparto y duelo. Donostia y online."
-        />
+        <meta property="og:title" content={data.pageTitle} />
+        <meta property="og:description" content={data.seoDescription} />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:locale" content="es_ES" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Psicología perinatal | Amatu Psicología"
-        />
-        <meta
-          name="twitter:description"
-          content="Embarazo, parto, posparto y duelo gestacional. Acompañamiento cercano y profesional."
-        />
+        <meta name="twitter:title" content={data.pageTitle} />
+        <meta name="twitter:description" content={data.seoDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbsLd)}
@@ -114,16 +94,37 @@ const Perinatal = () => {
       <Header />
 
       <main id="main" className="site-main">
-        <PageTitle
-          title="Perinatal"
-          quote="La semilla no teme a la luz, ni a las tinieblas, usa ambas para crecer"
-        />
+        <PageTitle title={data.pageTitle} quote={data.quote} />
 
-        {/* Mantén tu layout; Gallery ya añade un margen inferior suave (mb-4) antes del texto */}
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
-            {/* Usa el Gallery que guardamos (con aspect-ratio y margen controlado) */}
-            <Gallery data={ItemsData} service="perinatal" menu texts />
+            {/* Imagen principal + tabs */}
+            <Gallery
+              data={ItemsData}
+              service="perinatal"
+              heroImage={data.heroImage}
+              menu
+            />
+
+            {/* Render de textos SEO-friendly */}
+            <div className="block mt-0 pt-0" id="perinatal-texto">
+              <div className="row gutter-width-lg with-pb-lg">
+                {ItemsData.map((item, i) => (
+                  <div
+                    key={i}
+                    id={item.anchor}
+                    className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-justify"
+                  >
+                    <div className="card border-0">
+                      <div className="card-body p-0">
+                        <h2 className="h4">{item.title}</h2>
+                        <p className="p-large">{parse(item.description)}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>
