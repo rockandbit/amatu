@@ -21,12 +21,6 @@ collections:
               name: "seoDescription",
               widget: "text",
             }
-          - {
-              label: "OG Image (1200x630)",
-              name: "ogImage",
-              widget: "image",
-              required: false,
-            }
           - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
               label: "Frase/claim",
@@ -51,12 +45,6 @@ collections:
               name: "seoDescription",
               widget: "text",
             }
-          - {
-              label: "OG Image (1200x630)",
-              name: "ogImage",
-              widget: "image",
-              required: false,
-            }
           - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
               label: "Frase/Quote",
@@ -75,12 +63,8 @@ collections:
             widget: "list"
             fields:
               - { label: "ID", name: "id", widget: "string" }
-              - { label: "Título (H2)", name: "title", widget: "string" }
-              - {
-                  label: "Descripción",
-                  name: "description",
-                  widget: "markdown",
-                }
+              - { label: "Título (H2)", name: "heading", widget: "string" }
+              - { label: "Descripción", name: "body", widget: "markdown" }
               - { label: "Anchor", name: "anchor", widget: "string" }
 
       - file: "src/data/crianza.json"
@@ -93,12 +77,6 @@ collections:
               name: "seoDescription",
               widget: "text",
             }
-          - {
-              label: "OG Image (1200x630)",
-              name: "ogImage",
-              widget: "image",
-              required: false,
-            }
           - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
               label: "Frase/Quote",
@@ -117,12 +95,8 @@ collections:
             widget: "list"
             fields:
               - { label: "ID", name: "id", widget: "string" }
-              - { label: "Título (H2)", name: "title", widget: "string" }
-              - {
-                  label: "Descripción",
-                  name: "description",
-                  widget: "markdown",
-                }
+              - { label: "Título (H2)", name: "heading", widget: "string" }
+              - { label: "Descripción", name: "body", widget: "markdown" }
               - { label: "Anchor", name: "anchor", widget: "string" }
 
       - file: "src/data/bienestar.json"
@@ -135,12 +109,6 @@ collections:
               name: "seoDescription",
               widget: "text",
             }
-          - {
-              label: "OG Image (1200x630)",
-              name: "ogImage",
-              widget: "image",
-              required: false,
-            }
           - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
               label: "Frase/Quote",
@@ -159,10 +127,6 @@ collections:
             widget: "list"
             fields:
               - { label: "ID", name: "id", widget: "string" }
-              - { label: "Título (H2)", name: "title", widget: "string" }
-              - {
-                  label: "Descripción",
-                  name: "description",
-                  widget: "markdown",
-                }
+              - { label: "Título (H2)", name: "heading", widget: "string" }
+              - { label: "Descripción", name: "body", widget: "markdown" }
               - { label: "Anchor", name: "anchor", widget: "string" }

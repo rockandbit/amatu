@@ -42,7 +42,7 @@ class Gallery extends Component {
                       <li>
                         <a
                           href={`#${item.anchor}`}
-                          title={item.title}
+                          title={item.heading}
                           className={
                             "btn btn-link transform-scale-h click" +
                             (key === this.state.selected ? " active" : "")
@@ -52,7 +52,7 @@ class Gallery extends Component {
                             key === this.state.selected ? "true" : undefined
                           }
                         >
-                          {item.title}
+                          {item.heading}
                         </a>
                       </li>
                       {key !== data.length - 1 && (

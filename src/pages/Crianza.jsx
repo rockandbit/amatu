@@ -108,7 +108,6 @@ const Crianza = () => {
             <Gallery
               data={ItemsData}
               service="crianza"
-              menu
               heroImage={data.heroImage}
             />
 
