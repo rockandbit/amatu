@@ -34,6 +34,12 @@ collections:
               widget: "string",
               required: false,
             }
+          - {
+              label: "Imagen principal",
+              name: "heroImage",
+              widget: "image",
+              required: false,
+            }
 
       - file: "src/data/perinatal.json"
         label: "Perinatal"
@@ -46,29 +52,10 @@ collections:
               widget: "text",
             }
           - {
-              label: "OG Image",
+              label: "OG Image (1200x630)",
               name: "ogImage",
               widget: "image",
               required: false,
-            }
-          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
-          - { label: "Cita", name: "quote", widget: "string", required: false }
-          - label: "Secciones"
-            name: "sections"
-            widget: "list"
-            fields:
-              - { label: "Subtítulo (H2)", name: "heading", widget: "string" }
-              - { label: "Contenido", name: "body", widget: "markdown" }
-
-      - file: "src/data/crianza.json"
-        label: "Crianza"
-        name: "crianza"
-        fields:
-          - { label: "SEO - Título", name: "seoTitle", widget: "string" }
-          - {
-              label: "SEO - Descripción",
-              name: "seoDescription",
-              widget: "text",
             }
           - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
@@ -83,13 +70,60 @@ collections:
               widget: "image",
               required: false,
             }
-
           - label: "Secciones"
             name: "sections"
             widget: "list"
             fields:
-              - { label: "Subtítulo (H2)", name: "heading", widget: "string" }
-              - { label: "Contenido", name: "body", widget: "markdown" }
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título (H2)", name: "title", widget: "string" }
+              - {
+                  label: "Descripción",
+                  name: "description",
+                  widget: "markdown",
+                }
+              - { label: "Anchor", name: "anchor", widget: "string" }
+
+      - file: "src/data/crianza.json"
+        label: "Crianza"
+        name: "crianza"
+        fields:
+          - { label: "SEO - Título", name: "seoTitle", widget: "string" }
+          - {
+              label: "SEO - Descripción",
+              name: "seoDescription",
+              widget: "text",
+            }
+          - {
+              label: "OG Image (1200x630)",
+              name: "ogImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
+          - {
+              label: "Frase/Quote",
+              name: "quote",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Imagen principal",
+              name: "heroImage",
+              widget: "image",
+              required: false,
+            }
+          - label: "Secciones"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título (H2)", name: "title", widget: "string" }
+              - {
+                  label: "Descripción",
+                  name: "description",
+                  widget: "markdown",
+                }
+              - { label: "Anchor", name: "anchor", widget: "string" }
 
       - file: "src/data/bienestar.json"
         label: "Bienestar"
@@ -102,16 +136,33 @@ collections:
               widget: "text",
             }
           - {
-              label: "OG Image",
+              label: "OG Image (1200x630)",
               name: "ogImage",
               widget: "image",
               required: false,
             }
           - { label: "Título (H1)", name: "pageTitle", widget: "string" }
-          - { label: "Cita", name: "quote", widget: "string", required: false }
+          - {
+              label: "Frase/Quote",
+              name: "quote",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Imagen principal",
+              name: "heroImage",
+              widget: "image",
+              required: false,
+            }
           - label: "Secciones"
             name: "sections"
             widget: "list"
             fields:
-              - { label: "Subtítulo (H2)", name: "heading", widget: "string" }
-              - { label: "Contenido", name: "body", widget: "markdown" }
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título (H2)", name: "title", widget: "string" }
+              - {
+                  label: "Descripción",
+                  name: "description",
+                  widget: "markdown",
+                }
+              - { label: "Anchor", name: "anchor", widget: "string" }

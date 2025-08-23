@@ -1,19 +1,18 @@
+// src/pages/Perinatal.jsx
 import React, { Fragment, useEffect, useMemo } from "react";
 
 import Footer from "../blocks/footer/Footer";
 import Gallery from "../blocks/gallery/Gallery";
 import Header from "../blocks/header/Header.jsx";
 import { Helmet } from "react-helmet-async";
-import ItemsData from "../data/perinatal/perinatalItems.json"; // 👈 lista de secciones
 import Loading from "../blocks/loading/Loading";
 import LocalBusinessLD from "../seo/LocalBusinessLD.jsx";
 import PageTitle from "../blocks/page-title/PageTitle";
-import data from "../data/perinatal.json"; // 👈 SEO + heroImage
+import data from "../data/perinatal.json"; // 👈 Un único JSON
 import parse from "html-react-parser";
 
 const SITE_URL = "https://psicologiamatu.com";
 const PAGE_URL = `${SITE_URL}/perinatal`;
-const OG_IMAGE = `${SITE_URL}/assets/img/og/perinatal-og.jpg`;
 
 const Perinatal = () => {
   useEffect(() => {
@@ -28,8 +27,7 @@ const Perinatal = () => {
       "@context": "https://schema.org",
       "@type": "Service",
       name: "Acompañamiento perinatal",
-      description:
-        "Psicología perinatal: embarazo, parto, posparto y duelo gestacional. Acompañamiento emocional en Donostia y online.",
+      description: data.seoDescription,
       provider: {
         "@type": "LocalBusiness",
         name: "Amatu Psicología",
@@ -68,20 +66,19 @@ const Perinatal = () => {
         <title>{data.seoTitle}</title>
         <meta name="description" content={data.seoDescription} />
         <link rel="canonical" href={PAGE_URL} />
-
         <meta name="robots" content="index, follow" />
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content={data.pageTitle} />
         <meta property="og:description" content={data.seoDescription} />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image" content={data.ogImage} />
         <meta property="og:locale" content="es_ES" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={data.pageTitle} />
         <meta name="twitter:description" content={data.seoDescription} />
-        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image" content={data.ogImage} />
 
         <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
         <script type="application/ld+json">
@@ -98,20 +95,18 @@ const Perinatal = () => {
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
-            {/* Imagen principal + tabs */}
             <Gallery
-              data={ItemsData}
+              data={data.sections}
               service="perinatal"
               heroImage={data.heroImage}
               menu
             />
 
-            {/* Render de textos SEO-friendly */}
             <div className="block mt-0 pt-0" id="perinatal-texto">
               <div className="row gutter-width-lg with-pb-lg">
-                {ItemsData.map((item, i) => (
+                {data.sections.map((item) => (
                   <div
-                    key={i}
+                    key={item.id}
                     id={item.anchor}
                     className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-justify"
                   >
