@@ -1,46 +1,34 @@
-// src/blocks/gallery/Gallery.jsx
 import React, { Component } from "react";
 
 import GalleryTexts from "./GalleryTexts";
 import PropTypes from "prop-types";
 import _ from "lodash";
 
+// Mapeo de servicio → ruta del placeholder en /public/assets
+const placeholders = {
+  crianza: "/assets/img/placeholder/crianza.jpg",
+  perinatal: "/assets/img/placeholder/perinatal.jpg",
+  bienestar: "/assets/img/placeholder/bienestar.jpg",
+};
+
 class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = { selected: 0 };
-
-    // Carga eager para placeholders
-    this.placeholderImages = import.meta.glob(
-      "../../assets/img/placeholder/*.jpg",
-      { eager: true }
-    );
   }
 
   handleClick = (i) => {
     this.setState({ selected: i });
   };
 
-  // Utilidad para obtener el módulo ESM o valor directo
-  getImageModule = (path) => {
-    const mod =
-      this.placeholderImages[path] &&
-      (this.placeholderImages[path].default || this.placeholderImages[path]);
-    return mod;
-  };
-
   render() {
     const { data, service, menu, texts, heroImage } = this.props;
 
-    const imgPath = `../../assets/img/placeholder/${service}.jpg`;
+    // 👇 Prioridad: imagen del CMS → si no, placeholder
     const src =
       heroImage && heroImage.trim() !== ""
         ? heroImage
-        : this.getImageModule(`../../assets/img/placeholder/${service}.jpg`);
-
-    // Si conoces tamaño real del JPG, ponlo aquí (evita CLS).
-    // Ejemplo: 1600x900 -> aspect-ratio: 16/9
-    const aspectRatio = "16 / 9";
+        : placeholders[service] || "";
 
     return (
       <>
@@ -85,7 +73,6 @@ class Gallery extends Component {
                 className="object-fit-cover"
                 style={{ aspectRatio: "16 / 9" }}
               >
-                {" "}
                 <img
                   src={src}
                   alt={_.capitalize(service) || "Galería"}
@@ -113,8 +100,7 @@ Gallery.propTypes = {
   service: PropTypes.string.isRequired,
   menu: PropTypes.bool,
   texts: PropTypes.bool,
-  seeMore: PropTypes.string,
-  paddingBottomClass: PropTypes.string,
+  heroImage: PropTypes.string, // 👈 CMS image
 };
 
 export default Gallery;
