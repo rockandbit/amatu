@@ -1,17 +1,111 @@
 backend:
-  name: bridge
+  name: git-gateway
+  branch: master # tu rama de producción
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/uploads" # dónde se guardan en el repo
+public_folder: "/uploads" # cómo se referencian en la web
+
+publish_mode: editorial_workflow # opcional, permite "Draft → Review → Publish"
 
 collections:
   - name: "pages"
     label: "Páginas"
     files:
-      - file: "src/content/pages/perinatal.md"
+      - file: "src/data/home.json"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "SEO - Título", name: "seoTitle", widget: "string" }
+          - {
+              label: "SEO - Descripción",
+              name: "seoDescription",
+              widget: "text",
+            }
+          - {
+              label: "OG Image (1200x630)",
+              name: "ogImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
+          - {
+              label: "Frase/claim",
+              name: "quote",
+              widget: "string",
+              required: false,
+            }
+
+      - file: "src/data/perinatal.json"
         label: "Perinatal"
         name: "perinatal"
         fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descripción", name: "description", widget: "text" }
-          - { label: "Contenido", name: "body", widget: "markdown" }
+          - { label: "SEO - Título", name: "seoTitle", widget: "string" }
+          - {
+              label: "SEO - Descripción",
+              name: "seoDescription",
+              widget: "text",
+            }
+          - {
+              label: "OG Image",
+              name: "ogImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
+          - { label: "Cita", name: "quote", widget: "string", required: false }
+          - label: "Secciones"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Subtítulo (H2)", name: "heading", widget: "string" }
+              - { label: "Contenido", name: "body", widget: "markdown" }
+
+      - file: "src/data/crianza.json"
+        label: "Crianza"
+        name: "crianza"
+        fields:
+          - { label: "SEO - Título", name: "seoTitle", widget: "string" }
+          - {
+              label: "SEO - Descripción",
+              name: "seoDescription",
+              widget: "text",
+            }
+          - {
+              label: "OG Image",
+              name: "ogImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
+          - { label: "Cita", name: "quote", widget: "string", required: false }
+          - label: "Secciones"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Subtítulo (H2)", name: "heading", widget: "string" }
+              - { label: "Contenido", name: "body", widget: "markdown" }
+
+      - file: "src/data/bienestar.json"
+        label: "Bienestar"
+        name: "bienestar"
+        fields:
+          - { label: "SEO - Título", name: "seoTitle", widget: "string" }
+          - {
+              label: "SEO - Descripción",
+              name: "seoDescription",
+              widget: "text",
+            }
+          - {
+              label: "OG Image",
+              name: "ogImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
+          - { label: "Cita", name: "quote", widget: "string", required: false }
+          - label: "Secciones"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Subtítulo (H2)", name: "heading", widget: "string" }
+              - { label: "Contenido", name: "body", widget: "markdown" }
