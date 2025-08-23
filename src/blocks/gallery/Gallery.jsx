@@ -30,12 +30,13 @@ class Gallery extends Component {
   };
 
   render() {
-    const { data, service, menu, texts } = this.props;
+    const { data, service, menu, texts, heroImage } = this.props;
 
     const imgPath = `../../assets/img/placeholder/${service}.jpg`;
     const src =
-      heroImage ||
-      this.getImageModule(`../../assets/img/placeholder/${service}.jpg`);
+      heroImage && heroImage.trim() !== ""
+        ? heroImage
+        : this.getImageModule(`../../assets/img/placeholder/${service}.jpg`);
 
     // Si conoces tamaño real del JPG, ponlo aquí (evita CLS).
     // Ejemplo: 1600x900 -> aspect-ratio: 16/9
