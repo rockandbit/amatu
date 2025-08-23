@@ -70,14 +70,20 @@ collections:
               name: "seoDescription",
               widget: "text",
             }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
-              label: "OG Image",
-              name: "ogImage",
+              label: "Frase/Quote",
+              name: "quote",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Imagen principal",
+              name: "heroImage",
               widget: "image",
               required: false,
             }
-          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
-          - { label: "Cita", name: "quote", widget: "string", required: false }
+
           - label: "Secciones"
             name: "sections"
             widget: "list"

@@ -1,16 +1,15 @@
 // src/pages/Crianza.jsx
 import React, { Fragment, useEffect, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
-import ReactMarkdown from "react-markdown";
 
 import Footer from "../blocks/footer/Footer";
 import Gallery from "../blocks/gallery/Gallery";
 import Header from "../blocks/header/Header.jsx";
+import { Helmet } from "react-helmet-async";
 import ItemsData from "../data/crianza/crianzaItems.json";
 import Loading from "../blocks/loading/Loading";
 import LocalBusinessLD from "../seo/LocalBusinessLD.jsx";
 import PageTitle from "../blocks/page-title/PageTitle";
-
+import ReactMarkdown from "react-markdown";
 import data from "../data/crianza.json"; // 👈 nuevo JSON con el texto
 
 const SITE_URL = "https://psicologiamatu.com";
@@ -106,7 +105,12 @@ const Crianza = () => {
 
         <section id="page-content" className="spacer p-top-xl">
           <div className="wrapper">
-            <Gallery data={ItemsData} service="crianza" menu />
+            <Gallery
+              data={ItemsData}
+              service="crianza"
+              menu
+              heroImage={data.heroImage}
+            />
 
             <div className="block mt-0 pt-0" id="crianza-texto">
               <div className="row gutter-width-lg with-pb-lg">
