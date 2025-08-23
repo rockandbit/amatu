@@ -112,8 +112,8 @@ const Perinatal = () => {
                   >
                     <div className="card border-0">
                       <div className="card-body p-0">
-                        <h2 className="h4">{item.title}</h2>
-                        <p className="p-large">{parse(item.description)}</p>
+                        <h2 className="h4">{item.heading}</h2>
+                        <p className="p-large">{parse(item.body)}</p>
                       </div>
                     </div>
                   </div>
