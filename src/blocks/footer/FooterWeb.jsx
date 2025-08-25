@@ -44,17 +44,26 @@ const FooterWeb = () => {
             </h3>
             <ul className="list-unstyled m-0 p-0">
               <li className="mb-2">
-                <a href="/perinatal" style={{ color: "#a1544d" }}>
+                <a
+                  href="/perinatal"
+                  style={{ color: "#a1544d", textDecoration: "none" }}
+                >
                   Perinatal
                 </a>
               </li>
               <li className="mb-2">
-                <a href="/crianza" style={{ color: "#a1544d" }}>
+                <a
+                  href="/crianza"
+                  style={{ color: "#a1544d", textDecoration: "none" }}
+                >
                   Crianza
                 </a>
               </li>
               <li>
-                <a href="/bienestar" style={{ color: "#a1544d" }}>
+                <a
+                  href="/bienestar"
+                  style={{ color: "#a1544d", textDecoration: "none" }}
+                >
                   Bienestar
                 </a>
               </li>
@@ -69,12 +78,15 @@ const FooterWeb = () => {
             <div className="d-flex align-items-center justify-content-center mb-2 flex-wrap">
               <FontAwesomeIcon
                 icon={faPhoneAlt}
-                className="mr-2"
-                style={{ color: "#a1544d" }}
+                style={{ color: "#a1544d", marginRight: "5px" }}
               />
               <a
                 href="tel:+34608485881"
-                style={{ color: "#a1544d", wordBreak: "break-word" }}
+                style={{
+                  color: "#a1544d",
+                  wordBreak: "break-word",
+                  textDecoration: "none",
+                }}
               >
                 +34 608 48 58 81
               </a>
@@ -83,12 +95,15 @@ const FooterWeb = () => {
             <div className="d-flex align-items-center justify-content-center mb-2 flex-wrap">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="mr-2"
-                style={{ color: "#a1544d" }}
+                style={{ color: "#a1544d", marginRight: "5px" }}
               />
               <a
                 href="mailto:psicologia.amatu@gmail.com"
-                style={{ color: "#a1544d", wordBreak: "break-word" }}
+                style={{
+                  color: "#a1544d",
+                  wordBreak: "break-word",
+                  textDecoration: "none",
+                }}
               >
                 psicologia.amatu@gmail.com
               </a>
@@ -97,14 +112,17 @@ const FooterWeb = () => {
             <div className="d-flex align-items-center justify-content-center flex-wrap">
               <FontAwesomeIcon
                 icon={faInstagram}
-                className="mr-2"
-                style={{ color: "#a1544d" }}
+                style={{ color: "#a1544d", marginRight: "5px" }}
               />
               <a
                 href="https://instagram.com/psicologia.amatu"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#a1544d", wordBreak: "break-word" }}
+                style={{
+                  color: "#a1544d",
+                  wordBreak: "break-word",
+                  textDecoration: "none",
+                }}
               >
                 psicologia.amatu
               </a>
@@ -119,8 +137,11 @@ const FooterWeb = () => {
             <div className="d-flex align-items-start justify-content-center flex-wrap">
               <FontAwesomeIcon
                 icon={faLocationDot}
-                className="mr-2"
-                style={{ color: "#a1544d", marginTop: "2px" }}
+                style={{
+                  color: "#a1544d",
+                  marginTop: "2px",
+                  marginRight: "5px",
+                }}
               />
               <a
                 href="https://maps.app.goo.gl/b2oadT7H1tfV8gyD7"
@@ -130,6 +151,7 @@ const FooterWeb = () => {
                   color: "#a1544d",
                   wordBreak: "break-word",
                   textAlign: "center",
+                  textDecoration: "none",
                 }}
               >
                 <address className="m-0 d-inline">
