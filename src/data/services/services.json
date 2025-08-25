@@ -5,7 +5,8 @@
     "link": "/perinatal",
     "imgLink": "perinatal",
     "imgAlt": "La mejor guía para un acompañamiento respetuoso",
-    "categoryTitle": "Acompañamiento perinatal"
+    "categoryTitle": "Acompañamiento perinatal",
+    "image": ""
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "link": "/crianza",
     "imgLink": "crianza",
     "imgAlt": "Herramientas para una crianza desde el respeto mutuo",
-    "categoryTitle": "Crianza respetuosa"
+    "categoryTitle": "Crianza respetuosa",
+    "image": ""
   },
   {
     "id": "3",
@@ -21,6 +23,7 @@
     "link": "/bienestar",
     "imgLink": "bienestar",
     "imgAlt": "Cuéntame en qué puedo ayudarte",
-    "categoryTitle": "Bienestar emocional"
+    "categoryTitle": "Bienestar emocional",
+    "image": ""
   }
 ]

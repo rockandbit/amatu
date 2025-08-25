@@ -1,5 +1,4 @@
-import { Component } from "react";
-import React from "react";
+import React, { Component } from "react";
 
 class Services extends Component {
   constructor(props) {
@@ -9,6 +8,23 @@ class Services extends Component {
       eager: true,
     });
   }
+
+  // Preferir imagen subida desde CMS (item.image). Si no hay, usar el patrón antiguo con imgLink.
+  getImageSrc = (item) => {
+    if (
+      item.image &&
+      typeof item.image === "string" &&
+      item.image.trim() !== ""
+    ) {
+      return item.image; // p.ej. "/uploads/perinatal-card.jpg"
+    }
+    const key = `../../assets/img/services/${item.imgLink}.jpg`;
+    const mod = this.imageModules[key];
+    if (mod) return mod.default || mod;
+    // Placeholder público por si falta
+    return "/assets/img/placeholder/service-card.jpg";
+  };
+
   render() {
     return (
       <>
@@ -24,6 +40,7 @@ class Services extends Component {
               <div className="row gutter-width-lg">
                 {this.data &&
                   this.data.map((item, key) => {
+                    const src = this.getImageSrc(item);
                     return (
                       <div
                         key={key}
@@ -36,14 +53,7 @@ class Services extends Component {
                                 <div className="object-fit-cover transform-scale-h">
                                   <img
                                     className=""
-                                    src={
-                                      this.imageModules[
-                                        `../../assets/img/services/${item.imgLink}.jpg`
-                                      ]?.default ||
-                                      this.imageModules[
-                                        `../../assets/img/services/${item.imgLink}.jpg`
-                                      ]
-                                    }
+                                    src={src}
                                     alt={item.imgAlt}
                                   />
                                 </div>

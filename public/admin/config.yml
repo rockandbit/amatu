@@ -21,19 +21,70 @@ collections:
               name: "seoDescription",
               widget: "text",
             }
-          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
           - {
-              label: "Frase/claim",
-              name: "quote",
+              label: "SEO - Keywords",
+              name: "seoKeywords",
               widget: "string",
               required: false,
             }
           - {
-              label: "Imagen principal",
+              label: "OG Image (1200x630)",
+              name: "ogImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Título (H1)", name: "pageTitle", widget: "string" }
+          - {
+              label: "Imagen principal (Hero)",
               name: "heroImage",
               widget: "image",
               required: false,
             }
+          - { label: "Párrafo (HTML)", name: "introHtml", widget: "markdown" }
+          - {
+              label: "Firma (blockquote)",
+              name: "authorName",
+              widget: "string",
+            }
+
+      # SERVICIOS (lista) — Opción B: image opcional
+      - file: "src/data/services/services.json"
+        label: "Servicios (Home)"
+        name: "services_home"
+        fields:
+          - label: "Servicios"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Enlace", name: "link", widget: "string" }
+              - {
+                  label: "ALT imagen",
+                  name: "imgAlt",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Categoría (badge)",
+                  name: "categoryTitle",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Imagen (nueva, opcional)",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                  hint: "Si la subes, se usará esta. Si la dejas vacía, se usará imgLink.",
+                }
+              - {
+                  label: "imgLink (legacy, sin .jpg)",
+                  name: "imgLink",
+                  widget: "string",
+                  hint: "Nombre del archivo en src/assets/img/services/ (sin extensión). Solo si no subes una nueva imagen.",
+                }
 
       - file: "src/data/perinatal.json"
         label: "Perinatal"

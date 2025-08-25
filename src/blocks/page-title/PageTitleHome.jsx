@@ -1,9 +1,28 @@
 import React from "react";
-import { Link } from "react-scroll";
-import portada from "../../assets/img/portadaElisa.png";
 import { isMobile } from "react-device-detect";
+import portadaDefault from "../../assets/img/portadaElisa.png";
 
-const PageTitleHome = () => {
+/**
+ * Props desde CMS:
+ * - title: "Amatu"
+ * - heroImage: "/uploads/portada.jpg" (opcional; si no, usa portadaDefault)
+ * - introHtml: string con <b>, <br>, etc. (se respeta tal cual)
+ * - authorName: "Elisa Valenzuela Mendoza"
+ *
+ * ⚠️ Conserva exactamente las mismas clases/estructura HTML.
+ */
+const PageTitleHome = ({ title, heroImage, introHtml, authorName }) => {
+  const safeTitle = title || "Amatu";
+  console.log({ heroImage });
+  const safeHero =
+    heroImage && heroImage.trim() !== "" ? heroImage : portadaDefault;
+  const safeIntroHtml =
+    introHtml ||
+    `Es probable que, si has llegado aquí sea porque has sentido que hay maneras más amables y respetuosas de estar en el mundo.<br />
+     Déjame felicitarte por querer darte una <b>oportunidad</b>, <b>invertir en ti</b>, en tu <b>bienestar emocional</b> y en tu <b>potencial</b>.<br /><br />
+     Si sientes que ha llegado el momento, puedo acompañarte en tu proceso de vida.`;
+  const safeAuthor = authorName || "Elisa Valenzuela Mendoza";
+
   return (
     <section id="page-title" className="block">
       <div className="wrapper">
@@ -11,25 +30,18 @@ const PageTitleHome = () => {
           <div className="col col-1 position-relative">
             <div className="title">
               <h2>
-                Amatu<span className="dot">.</span>
+                {safeTitle}
+                <span className="dot">.</span>
               </h2>
-
-              <div className="title-clone">Amatu</div>
+              <div className="title-clone">{safeTitle}</div>
             </div>
 
             <div className="spacer p-top-lg d-flex">
-              <p className="p-large w-75 text-justify">
-                Es probable que, si has llegado aquí sea porque has sentido que
-                hay maneras más amables y respetuosas de estar en el mundo.
-                <br />
-                Déjame felicitarte por querer darte una <b>oportunidad</b>,{" "}
-                <b>invertir en ti</b>, en tu <b>bienestar emocional</b> y en tu{" "}
-                <b>potencial</b>.
-                <br />
-                <br />
-                Si sientes que ha llegado el momento, puedo acompañarte en tu
-                proceso de vida.
-              </p>
+              {/* Mantiene p-large y w-75 */}
+              <p
+                className="p-large w-75 text-justify"
+                dangerouslySetInnerHTML={{ __html: safeIntroHtml }}
+              />
             </div>
           </div>
 
@@ -39,9 +51,11 @@ const PageTitleHome = () => {
                 <div className="img object-fit">
                   <div className="object-fit-cover">
                     <img
-                      src={portada}
+                      src={safeHero}
                       className="img-fluid"
-                      alt="Elisa Valenzuela Mendoza"
+                      alt={safeAuthor}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -56,9 +70,7 @@ const PageTitleHome = () => {
                     <b>salud mental perinatal</b>.
                     <br />
                   </p>
-                  <blockquote className="text-right">
-                    Elisa Valenzuela Mendoza
-                  </blockquote>
+                  <blockquote className="text-right">{safeAuthor}</blockquote>
                 </div>
               </div>
             </div>
