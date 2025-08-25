@@ -151,24 +151,36 @@ const FooterCell = () => {
                 className="mr-2"
                 style={{ color: "#a1544d", marginTop: "2px" }}
               />
-              <address
-                className="m-0 d-inline"
-                itemProp="address"
-                itemScope
-                itemType="https://schema.org/PostalAddress"
+              <a
+                href="https://maps.app.goo.gl/b2oadT7H1tfV8gyD7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver ubicación en Google Maps"
                 style={{
                   color: "#a1544d",
-                  fontSize: "11px",
-                  wordBreak: "break-word",
-                  textAlign: "center",
+                  fontSize: "10px",
+                  textDecoration: "none",
                 }}
               >
-                <span itemProp="streetAddress">
-                  Plaza del Centenario 2, 1º Izq
-                </span>
-                , <span itemProp="postalCode">20006</span>,{" "}
-                <span itemProp="addressLocality">Donostia</span>
-              </address>
+                <address
+                  className="m-0 d-inline"
+                  itemProp="address"
+                  itemScope
+                  itemType="https://schema.org/PostalAddress"
+                  style={{
+                    color: "#a1544d",
+                    fontSize: "11px",
+                    wordBreak: "break-word",
+                    textAlign: "center",
+                  }}
+                >
+                  <span itemProp="streetAddress">
+                    Plaza del Centenario 2, 1º Izq
+                  </span>
+                  , <span itemProp="postalCode">20006</span>,{" "}
+                  <span itemProp="addressLocality">Donostia</span>
+                </address>
+              </a>
             </div>
           </div>
         </div>
