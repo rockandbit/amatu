@@ -28,6 +28,6 @@ This setup deliberately uses Netlify Identity and Git Gateway as the only CMS au
 3. Invite each content editor from the Identity users page.
 4. Enable **Git Gateway** under Identity services.
 5. Leave Git Gateway roles unset so every invited Identity user can use the CMS.
-6. In Identity invitation and password-recovery email templates, direct recipients to `/admin/` so they complete the flow in the CMS.
+6. The site-wide Identity widget processes invitation and password-recovery links, then redirects successful logins to `/admin/`.
 
-`/admin/` is publicly reachable as a page, but only authenticated Identity users with the permitted role can edit or publish content.
+`/admin/` is publicly reachable as a page, but only authenticated Netlify Identity users can edit or publish content.
