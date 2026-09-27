@@ -1,8 +1,8 @@
-# React Router SPA fallback
-/*    /index.html   200
-
 # Decap CMS admin panel
 /admin/*   /admin/index.html   200
 
 # Netlify Identity (invitation, confirm, recovery, etc.)
 /.netlify/identity/*   /.netlify/identity/:splat   200
+
+# React Router SPA fallback
+/*    /index.html   200
